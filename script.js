@@ -15,7 +15,7 @@ const formHTML = `
             <fieldset id="slide-1" class="flex flex-col items-start gap-8 md:gap-4 h-responsive md:h-preform-fieldset-h md:max-w-preform-fieldset-w md:w-preform-fieldset-w px-12 py-8 shadow-fieldset-shadow">
                 <h5 class="font-tungsten text-h5 p-0">Admission</h5>
                 <p class="font-raleway text-p pb-6">Lorem ipsum dolor sit amet consectetur. Mattis sem maecenas mauris condimentum nulla nunc molestie fermentum at. Convallis risus nulla tempor vulputate volutpat adipiscing.</p>
-                <a id="next-slide-1" class="font-raleway text-button uppercase font-bold px-button-x py-button-y bg-inseec-red text-white hover:bg-black transition">Continue</a>
+                <a id="next-slide-1" class="font-raleway text-button uppercase font-bold px-button-x py-button-y bg-inseec-red text-white hover:bg-black transition hover:pointer">Continue</a>
             </fieldset>
             <fieldset id="slide-2" class="hidden flex-col items-start justify-between w-full h-responsive md:h-preform-fieldset-h md:max-w-preform-fieldset-w md:w-preform-fieldset-w px-12 py-8 shadow-fieldset-shadow">
                 <h5 class="font-tungsten text-h5 p-0">Admission</h5>
@@ -23,23 +23,23 @@ const formHTML = `
                     What is your English level ?
                 </h6>
                 <div>
-                    <input type="radio" name="english-level" id="no-skills" value="no-skills"  class="accent-inseec-red" checked>
+                    <input type="radio" name="english-level" id="no-skills" value="no-skills"  class="accent-inseec-red hover:pointer" checked>
                     <label for="no-skills">I don't speak English</label>
                 </div>
                 <div>
-                    <input type="radio" name="english-level" id="beginner" value="beginner" class="accent-inseec-red">
+                    <input type="radio" name="english-level" id="beginner" value="beginner" class="accent-inseec-red hover:pointer">
                     <label for="beginner">Beginner (A1-A2)</label>
                 </div>
                 <div>
-                    <input type="radio" name="english-level" id="intermediate" value="intermediate" class="accent-inseec-red">
+                    <input type="radio" name="english-level" id="intermediate" value="intermediate" class="accent-inseec-red hover:pointer">
                     <label for="intermediate">Intermediate (B1-B2)</label>
                 </div>
                 <div>
-                    <input type="radio" name="english-level" id="advance" value="advance" class="accent-inseec-red">
+                    <input type="radio" name="english-level" id="advance" value="advance" class="accent-inseec-red hover:pointer">
                     <label for="advance">Advance (C1)</label>
                 </div>
                 <div>
-                    <input type="radio" name="english-level" id="native" value="native" class="accent-inseec-red">
+                    <input type="radio" name="english-level" id="native" value="native" class="accent-inseec-red hover:pointer">
                     <label for="native">Native (C2)</label>
                 </div>
                 <div class="flex flex-col md:flex-row items-start md:items-end gap-4 md:gap-0 md:w-full justify-between mt-12 md:mt-6">
@@ -47,7 +47,7 @@ const formHTML = `
                         <hr class="h-3 w-12 bg-inseec-red">
                         <hr class="h-3 w-12 bg-gray-200">
                     </div>
-                    <a id="next-slide-2" class="font-raleway text-button uppercase font-bold px-button-x py-button-y bg-inseec-red text-white hover:bg-black transition">Next</a>
+                    <a id="next-slide-2" class="font-raleway text-button uppercase font-bold px-button-x py-button-y bg-inseec-red text-white hover:bg-black transition hover:pointer">Next</a>
                 </div>
             </fieldset>
             <fieldset id="slide-3" class="hidden flex-col items-start justify-between w-full h-responsive md:h-preform-fieldset-h md:max-w-preform-fieldset-w md:w-preform-fieldset-w px-12 py-8 shadow-fieldset-shadow">
@@ -81,11 +81,11 @@ const formHTML = `
                     </span>
                 </p>
                 <div>
-                    <input type="radio" name="aware-abt-fees" id="aware" value="aware" class="accent-inseec-red" checked>
+                    <input type="radio" name="aware-abt-fees" id="aware" value="aware" class="accent-inseec-red hover:pointer" checked>
                     <label for="aware">Yes</label>
                 </div>
                 <div>
-                    <input type="radio" name="aware-abt-fees" id="not-aware" value="not-aware" class="accent-inseec-red">
+                    <input type="radio" name="aware-abt-fees" id="not-aware" value="not-aware" class="accent-inseec-red hover:pointer">
                     <label for="not-aware">No</label>
                 </div>
                 <div class="flex flex-col md:flex-row items-start md:items-end gap-4 md:gap-0 md:w-full justify-between mt-12 md: mt-0">
@@ -93,7 +93,7 @@ const formHTML = `
                         <hr class="h-3 w-12 bg-black">
                         <hr class="h-3 w-12 bg-inseec-red">
                     </div>
-                    <button type="submit" id="next-slide-3" class="font-raleway text-button uppercase font-bold px-button-x py-button-y bg-inseec-red text-white hover:bg-black transition">Submit</button>
+                    <button type="submit" id="next-slide-3" class="font-raleway text-button uppercase font-bold px-button-x py-button-y bg-inseec-red text-white hover:bg-black transition hover:pointer">Submit</button>
                 </div>
             </fieldset>
         </form>
@@ -113,7 +113,7 @@ const formHTML = `
                 You will be redirected to the application form in a few seconds.
                 If not, click the link below :
             </p>
-            <a href="https://candidater.monaco.edu/#/ium" target="_blank" class="font-raleway font-normal text-p underline text-inseec-red hover:text-black transition">Link to application form</a>
+            <a href="https://candidater.monaco.edu/#/ium" target="_blank" class="font-raleway font-normal text-p underline text-inseec-red hover:text-black transition hover:pointer">Link to application form</a>
         </div>
     </div>
 `;
