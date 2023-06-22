@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node script.js",
-    "build-css": "npx tailwindcss -o style.css"
+    "build-css": "npx tailwindcss -o tailwind.css"
   },
   "repository": {
     "type": "git",
