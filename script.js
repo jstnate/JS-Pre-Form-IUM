@@ -1,11 +1,14 @@
-let index = 1
+// Initialize index
+let index = 1;
 
+// Get DOM elements
 let preformContainer = document.getElementById('preform-container');
 let preform;
 let isEligibleMessage;
 let isNotEligibleMessage;
 let closePreform;
 
+// HTML template for the form
 const formHTML = `
     <div id="preform-section" class="w-full flex items-center justify-center h-full">
         <form id="preform" class="flex items-center w-full items-center justify-center">
@@ -115,39 +118,50 @@ const formHTML = `
     </div>
 `;
 
+// Function to generate the preform
 function generatePreform() {
     preformContainer.innerHTML = formHTML;
 }
 
+// Function to handle slide actions
 function slideAction(id) {
     const currentSlide = document.getElementById(`slide-${id}`);
     const nextSlide = document.getElementById(`slide-${id + 1}`);
     const buttonSlide = document.getElementById(`next-slide-${id}`);
 
     if (buttonSlide && currentSlide && nextSlide) {
+        // Set onclick event for the slide button
         buttonSlide.onclick = function (event) {
             displaySlide(currentSlide, nextSlide, event);
         };
     }
 }
 
+// Function to display a slide
 function displaySlide(slide, nextSlide) {
+    // Hide current slide
     slide.classList.remove('flex');
     slide.classList.add('hidden');
+    // Show next slide
     nextSlide.classList.remove('hidden');
     nextSlide.classList.add('flex');
+    // Increment index
     index++;
+    // Set up slide action for the next slide
     slideAction(index);
 }
 
+// Function to display the final message based on form inputs
 function displayFinalMessage(e) {
     e.preventDefault();
     const englishLevelChoice = document.querySelector('input[name="english-level"]:checked');
     const isAwareAboutTuitionFees = document.querySelector('input[name="aware-abt-fees"]:checked');
 
+    // Hide the form
     preform.classList.remove('flex');
     preform.classList.add('hidden');
 
+    // Display appropriate message based on form inputs
     if (
         (englishLevelChoice.value === 'intermediate' || englishLevelChoice.value === 'advance' || englishLevelChoice.value === 'native')
         && isAwareAboutTuitionFees.value === 'aware'
@@ -160,19 +174,25 @@ function displayFinalMessage(e) {
     }
 }
 
+// Function to set up the preform and attach event handlers
 window.onload = function () {
+    // Generate the preform
     generatePreform();
+    // Set up slide action for the initial slide
     slideAction(index);
 
+    // Get additional DOM elements
     preform = document.getElementById('preform');
     isEligibleMessage = document.getElementById('slide-eligible');
     isNotEligibleMessage = document.getElementById('slide-not-eligible');
     closePreform = document.getElementById('close-preform');
 
+    // Event handler for closing the "not eligible" message
     closePreform.onclick = function () {
         isNotEligibleMessage.classList.remove('flex');
         isNotEligibleMessage.classList.add('hidden');
     };
 
+    // Event handler for form submission
     preform.onsubmit = displayFinalMessage;
 };
