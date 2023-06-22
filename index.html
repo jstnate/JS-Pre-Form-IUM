@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="TungstenCondensed-Book/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'tungsten': ['Tungsten', 'sans-serif'],
+                        'raleway': ['raleway', 'sans-serif']
+                    },
+                    fontSize: {
+                        'h5': '48px',
+                        'h6': '20px',
+                        'button': '16px',
+                        'p': '16px',
+                        'point': '28px',
+                    },
+                    padding: {
+                        'button-x': '2em',
+                        'button-y': '1em'
+                    },
+                    colors: {
+                      'inseec-red': '#EE2D28'
+                    },
+                    minHeight: {
+                        'preform-fieldset-h': '400px'
+                    },
+                    maxWidth: {
+                        'preform-fieldset-w': '800px'
+                    },
+                    width: {
+                        'preform-fieldset-w': '800px'
+                    },
+                    boxShadow: {
+                        'fieldset-shadow': '0 8px 16px -5px rgba(0,0,0,0.15)'
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <section id="preform-section" class="w-full flex items-center justify-center">
+        <form id="preform" class="flex items-center w-full items-center justify-center">
+            <fieldset id="slide-1" class="flex flex-col items-start gap-4 min-h-preform-fieldset-h max-w-preform-fieldset-w md:w-preform-fieldset-w px-12 py-8 shadow-fieldset-shadow">
+                <h5 class="font-tungsten text-h5 p-0">Admission</h5>
+                <p class="font-raleway text-p pb-6">Lorem ipsum dolor sit amet consectetur. Mattis sem maecenas mauris condimentum nulla nunc molestie fermentum at. Convallis risus nulla tempor vulputate volutpat adipiscing.</p>
+                <a id="next-slide-1" class="font-raleway text-button uppercase font-bold px-button-x py-button-y bg-inseec-red text-white hover:bg-black transition">Continue</a>
+            </fieldset>
+            <fieldset id="slide-2" class="hidden flex-col items-start justify-between min-h-preform-fieldset-h max-w-preform-fieldset-w md:w-preform-fieldset-w px-12 py-8 shadow-fieldset-shadow">
+                <h5 class="font-tungsten text-h5 p-0">Admission</h5>
+                <h6 class="font-bold font-raleway text-h6">
+                    What is your English level ?
+                </h6>
+                <div>
+                    <input type="radio" name="english-level" id="no-skills" value="no-skills"  class =accent-inseec-red checked>
+                    <label for="no-skills">I don't speak English</label>
+                </div>
+                <div>
+                    <input type="radio" name="english-level" id="beginner" value="beginner" class="accent-inseec-red">
+                    <label for="beginner">Beginner (A1-A2)</label>
+                </div>
+                <div>
+                    <input type="radio" name="english-level" id="intermediate" value="intermediate" class="accent-inseec-red">
+                    <label for="intermediate">Intermediate (B1-B2)</label>
+                </div>
+                <div>
+                    <input type="radio" name="english-level" id="advance" value="advance" class="accent-inseec-red">
+                    <label for="advance">Advance (C1)</label>
+                </div>
+                <div>
+                    <input type="radio" name="english-level" id="native" value="native" class="accent-inseec-red">
+                    <label for="native">Native (C2)</label>
+                </div>
+                <div class="flex items-end w-full justify-between">
+                    <div class="flex items-center gap-4">
+                        <hr class="h-3 w-12 bg-inseec-red">
+                        <hr class="h-3 w-12 bg-gray-200">
+                    </div>
+                    <a id="next-slide-2" class="font-raleway text-button uppercase font-bold px-button-x py-button-y bg-inseec-red text-white hover:bg-black transition">Next</a>
+                </div>
+            </fieldset>
+            <fieldset id="slide-3" class="hidden flex-col items-start justify-between min-h-preform-fieldset-h max-w-preform-fieldset-w md:w-preform-fieldset-w px-12 py-8 shadow-fieldset-shadow">
+                <h5 class="font-tungsten text-h5 p-0">Admission</h5>
+                <h6 class="font-bold font-raleway text-h6">
+                    Are you aware that tuition fees for you program are about :
+                    <br>
+                    <p class="font-raleway font-normal text-p pb-6 flex items-center">
+                        <strong class="pr-1">Bachelor :</strong>
+                        13 500€
+                        <span class="flex bg-inseec-red rounded-full w-[5px] h-[5px] mx-4"></span>
+                        <strong class="pr-1">MSC :</strong>
+                        25 000€
+                        <span class="flex bg-inseec-red rounded-full w-[5px] h-[5px] mx-4"></span>
+                        <strong class="pr-1">MBA :</strong>
+                        40 000 €
+                        <span class="flex bg-inseec-red rounded-full w-[5px] h-[5px] mx-4"></span>
+                        <strong class="pr-1">DBA :</strong>
+                        49 500€
+                    </p>
+                </h6>
+
+                <div>
+                    <input type="radio" name="aware-abt-tuition" id="aware" value="aware" class="accent-inseec-red" checked>
+                    <label for="aware">Yes</label>
+                </div>
+                <div>
+                    <input type="radio" name="aware-abt-tuition" id="not-aware" value="not-aware" class="accent-inseec-red">
+                    <label for="not-aware">No</label>
+                </div>
+                <div class="flex items-end w-full justify-between">
+                    <div class="flex items-center gap-4">
+                        <hr class="h-3 w-12 bg-black">
+                        <hr class="h-3 w-12 bg-inseec-red">
+                    </div>
+                    <a type="submit" id="next-slide-3" class="font-raleway text-button uppercase font-bold px-button-x py-button-y bg-inseec-red text-white hover:bg-black transition">Submit</a>
+                </div>
+            </fieldset>
+        </form>
+        <div id="slide-not-eligible" class="hidden flex-col items-start gap-6 min-h-preform-fieldset-h max-w-preform-fieldset-w lg:w-preform-fieldset-w px-12 py-8 shadow-fieldset-shadow">
+            <h6 class="font-bold font-raleway text-h6">Thank for your interest in our University.</h6>
+            <p class="font-raleway font-normal text-p flex items-center">
+                It looks like you are not eligible to apply for this program according to the answers you provided.
+                However, we would be delighted to guide you and to tell you more about another program that would be suitable for your profile.
+            </p>
+            <p class="font-raleway font-normal pb-2 text-p flex items-center" >In case of any doubt, please contact the Admissions Team at <a href="mailto:admissions@monaco.edu" class="ml-1 font-raleway font-normal text-p underline text-inseec-red hover:text-black transition">admissions@monaco.edu</a></p>
+            <a id="close-preform" class="font-raleway text-button uppercase font-bold px-button-x py-button-y bg-inseec-red text-white hover:bg-black transition">Close</a>
+        </div>
+
+        <div id="slide-eligible" class="hidden flex-col items-start gap-4 md:w-preform-fieldset-w px-12 py-16 shadow-fieldset-shadow">
+            <h6 class="font-bold font-raleway text-h6">You are eligible to apply.</h6>
+            <p class="font-raleway font-normal text-p">
+                You will be redirected to the application form in a few seconds.
+                If not, click the link below :
+            </p>
+            <a href="https://candidater.monaco.edu/#/ium" target="_blank" class="font-raleway font-normal text-p underline text-inseec-red hover:text-black transition">Link to application form</a>
+        </div>
+    </section>
+</body>
+</html>
