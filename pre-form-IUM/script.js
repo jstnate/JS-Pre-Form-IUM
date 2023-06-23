@@ -15,7 +15,7 @@ let closePreform;
 // HTML template for the form
 const formHTML = `
     <div id="preform-section" class="w-full flex items-center justify-center h-full">
-            <form id="preform" class="flex flex-col items-start h-responsive md:h-preform-fieldset-h w-full md:max-w-preform-fieldset-w md:w-preform-fieldset-w px-12 py-6 shadow-fieldset-shadow overflow-hidden relative">
+            <form id="preform" class="flex flex-col items-start sm:min-h[70vh] max-h-[90vh] md:h-preform-fieldset-h w-full md:max-w-preform-fieldset-w md:w-preform-fieldset-w px-12 py-6 shadow-fieldset-shadow overflow-hidden relative">
                 <h5 class="font-tungsten text-h5">Admission</h5>
                 <div id="preform-slider" class="flex items-start gap-12 transition">
                     <fieldset id="slide-1" class="flex flex-col items-start gap-8 md:gap-4 md:w-calc-fieldset-w" style="border: none;">
