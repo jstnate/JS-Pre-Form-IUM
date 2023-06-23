@@ -51,7 +51,7 @@ const formHTML = `
                                 <hr class="h-3 w-12 bg-inseec-red">
                                 <hr class="h-3 w-12 bg-gray-200">
                             </div>
-                            <a id="next-slide-2" class="font-raleway text-button uppercase font-bold px-button-x py-button-y bg-inseec-red text-white hover:bg-black transition hover:cursor-pointer">Next</a>
+                            <a id="next-slide-2" class="font-raleway text-button uppercase font-bold px-button-x py-button-y bg-inseec-red text-white hover:text-white hover:bg-black transition hover:cursor-pointer">Next</a>
                         </div>
                     </fieldset>
                     <fieldset id="slide-3" class="flex flex-col items-start gap-4 md:gap-2 md:w-calc-fieldset-w" style="border: none;">
