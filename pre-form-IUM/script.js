@@ -17,7 +17,7 @@ const formHTML = `
     <div id="preform-section" class="w-full flex items-center justify-center h-full">
             <form id="preform" class="flex flex-col items-start h-responsive md:h-preform-fieldset-h w-full md:max-w-preform-fieldset-w md:w-preform-fieldset-w px-12 py-6 shadow-fieldset-shadow overflow-hidden relative">
                 <h5 class="font-tungsten text-h5">Admission</h5>
-                <div id="preform-slider" class="flex items-start gap-12 transition">
+                <div id="preform-slider" class="flex items-start gap-14 transition">
                     <fieldset id="slide-1" class="flex flex-col items-start gap-8 md:gap-4 md:w-calc-fieldset-w">
                         <p class="w-full font-raleway text-p pb-6 pt-2">This international admission procedure is intended for foreign students residing outside France. If you are already in France, I invite you to apply directly on the website of schools.</p>
                         <a id="next-slide-1" class="font-raleway text-button uppercase font-bold px-button-x py-button-y bg-inseec-red text-white hover:bg-black transition hover:cursor-pointer">Continue</a>
@@ -96,7 +96,7 @@ const formHTML = `
                                 <hr class="h-3 w-12 bg-black">
                                 <hr class="h-3 w-12 bg-inseec-red">
                             </div>
-                            <button type="submit" id="next-slide-3" class="font-raleway text-button uppercase font-bold px-button-x py-button-y bg-inseec-red text-white hover:bg-black transition hover:cursor-pointer">Submit</button>
+                            <button type="submit" id="next-slide-3" style="border-radius: 0; border: none;" class="font-raleway text-button uppercase font-bold px-button-x py-button-y bg-inseec-red text-white hover:bg-black transition hover:cursor-pointer">Submit</button>
                         </div>
                     </fieldset>
                 </div>
