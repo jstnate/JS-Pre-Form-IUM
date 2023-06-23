@@ -17,12 +17,12 @@ const formHTML = `
     <div id="preform-section" class="w-full flex items-center justify-center h-full">
             <form id="preform" class="flex flex-col items-start h-responsive md:h-preform-fieldset-h w-full md:max-w-preform-fieldset-w md:w-preform-fieldset-w px-12 py-6 shadow-fieldset-shadow overflow-hidden relative">
                 <h5 class="font-tungsten text-h5">Admission</h5>
-                <div id="preform-slider" class="flex items-start gap-14 transition">
-                    <fieldset id="slide-1" class="flex flex-col items-start gap-8 md:gap-4 md:w-calc-fieldset-w">
+                <div id="preform-slider" class="flex items-start gap-12 transition">
+                    <fieldset id="slide-1" class="flex flex-col items-start gap-8 md:gap-4 md:w-calc-fieldset-w" style="border: none;">
                         <p class="w-full font-raleway text-p pb-6 pt-2">This international admission procedure is intended for foreign students residing outside France. If you are already in France, I invite you to apply directly on the website of schools.</p>
                         <a id="next-slide-1" class="font-raleway text-button uppercase font-bold px-button-x py-button-y bg-inseec-red text-white hover:bg-black transition hover:cursor-pointer">Continue</a>
                     </fieldset>
-                    <fieldset id="slide-2" class="flex flex-col items-start gap-4 md:gap-2 md:w-calc-fieldset-w">
+                    <fieldset id="slide-2" class="flex flex-col items-start gap-4 md:gap-2 md:w-calc-fieldset-w" style="border: none;">
                         <h6 class="font-bold font-raleway text-h6  mb-2 ">
                             What is your English level ?
                         </h6>
@@ -54,7 +54,7 @@ const formHTML = `
                             <a id="next-slide-2" class="font-raleway text-button uppercase font-bold px-button-x py-button-y bg-inseec-red text-white hover:bg-black transition hover:cursor-pointer">Next</a>
                         </div>
                     </fieldset>
-                    <fieldset id="slide-3" class="flex flex-col items-start gap-4 md:gap-2 md:w-calc-fieldset-w">
+                    <fieldset id="slide-3" class="flex flex-col items-start gap-4 md:gap-2 md:w-calc-fieldset-w" style="border: none;">
                         <h6 class="font-bold font-raleway text-h6">
                             Are you aware that tuition fees for you program are about :
                         </h6>
@@ -132,9 +132,8 @@ function slideAction(id) {
     const buttonSlide = document.getElementById(`next-slide-${id}`);
 
     if (buttonSlide) {
-        const currentSlideWidth = document.getElementById(`slide-${id}`).offsetWidth;
-        nextSlideIndex = (parseInt(computedStyle.paddingRight) + currentSlideWidth) * index
-        currentSlideIndex = (parseInt(computedStyle.paddingRight) + currentSlideWidth) * (index - 1)
+        nextSlideIndex = (parseInt(computedStyle.width) * index) - (parseInt(computedStyle.paddingRight) * index)
+        currentSlideIndex = (parseInt(computedStyle.width) * (index - 1))  - (parseInt(computedStyle.paddingRight) * index)
         // Set onclick event for the slide button
         buttonSlide.onclick = function () {
             displaySlide(currentSlideIndex, nextSlideIndex);
