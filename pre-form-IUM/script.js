@@ -19,7 +19,7 @@ const formHTML = `
                 <h5 class="font-tungsten text-h5">Admission</h5>
                 <div id="preform-slider" class="flex items-start gap-12 transition">
                     <fieldset id="slide-1" class="flex flex-col items-start gap-8 md:gap-4 md:w-calc-fieldset-w">
-                        <p class="w-full font-raleway text-p pb-6">Lorem ipsum dolor sit amet consectetur. Mattis sem maecenas mauris condimentum nulla nunc molestie fermentum at. Convallis risus nulla tempor vulputate volutpat adipiscing.</p>
+                        <p class="w-full font-raleway text-p pb-6 pt-2">This international admission procedure is intended for foreign students residing outside France. If you are already in France, I invite you to apply directly on the website of schools.</p>
                         <a id="next-slide-1" class="font-raleway text-button uppercase font-bold px-button-x py-button-y bg-inseec-red text-white hover:bg-black transition hover:cursor-pointer">Continue</a>
                     </fieldset>
                     <fieldset id="slide-2" class="flex flex-col items-start gap-4 md:gap-2 md:w-calc-fieldset-w">
@@ -46,7 +46,7 @@ const formHTML = `
                             <input type="radio" name="english-level" id="native" value="native" class="accent-inseec-red hover:cursor-pointer">
                             <label for="native">Native (C2)</label>
                         </div>
-                        <div class="flex flex-col md:flex-row items-start md:items-end gap-4 mt-8 md:gap-0 md:w-full justify-between ">
+                        <div class="flex flex-col md:flex-row items-start md:items-end gap-4 mt-6 md:mt-0 md:gap-0 md:w-full justify-between ">
                             <div class="w-full flex items-center justify-between md:justify-normal md:gap-4">
                                 <hr class="h-3 w-12 bg-inseec-red">
                                 <hr class="h-3 w-12 bg-gray-200">
@@ -91,7 +91,7 @@ const formHTML = `
                             <input type="radio" name="aware-abt-fees" id="not-aware" value="not-aware" class="accent-inseec-red hover:cursor-pointer">
                             <label for="not-aware">No</label>
                         </div>
-                        <div class="flex flex-col md:flex-row items-start md:items-end gap-4 md:gap-0 md:w-full justify-between mt-8 md: mt-0">
+                        <div class="flex flex-col md:flex-row items-start md:items-end gap-4 md:gap-0 md:w-full justify-between mt-8 md:mt-16">
                             <div class="w-full flex items-center justify-between md:justify-normal md:gap-4">
                                 <hr class="h-3 w-12 bg-black">
                                 <hr class="h-3 w-12 bg-inseec-red">

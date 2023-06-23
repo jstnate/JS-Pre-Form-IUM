@@ -1,0 +1,24 @@
+{
+  "name": "pre-form-ium",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "npx tailwindcss -i ./tailwind.css -o ./style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jstnate/JS-Pre-Form-IUM.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jstnate/JS-Pre-Form-IUM/issues"
+  },
+  "homepage": "https://github.com/jstnate/JS-Pre-Form-IUM#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.3.2"
+  }
+}
