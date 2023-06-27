@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to set up the preform and attach event handlers
     window.onload = function () {
         // Generate the preform
-        generatePreform();
+        // generatePreform();
 
         // Get additional DOM elements
         preform = document.getElementById('preform');
