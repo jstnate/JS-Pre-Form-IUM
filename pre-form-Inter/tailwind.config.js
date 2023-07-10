@@ -19,7 +19,7 @@ module.exports = {
         'button-y': '1em'
       },
       colors: {
-        'inseec-red': '#EE2D28'
+        'inseec-purple': '#5D0282'
       },
       maxWidth: {
         'preform-fieldset-w': '800px'
@@ -35,7 +35,7 @@ module.exports = {
         'auto': 'auto'
       },
       boxShadow: {
-        'fieldset-shadow': '0 8px 16px -5px rgba(0,0,0,0.15)'
+        'fieldset-shadow': '0 0 16px -5px rgba(0,0,0,0.15)'
       },
       translate: {
         'slide-1': 'calc(800px + 96px)'
