@@ -729,6 +729,10 @@ video {
   overflow: hidden;
 }
 
+.rounded-button {
+  border-radius: 50px;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
@@ -816,6 +820,11 @@ video {
 
 .text-p {
   font-size: 16px;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .font-bold {

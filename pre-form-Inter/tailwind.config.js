@@ -39,6 +39,9 @@ module.exports = {
       },
       translate: {
         'slide-1': 'calc(800px + 96px)'
+      },
+      borderRadius: {
+        'button': '50px'
       }
     }
   },
