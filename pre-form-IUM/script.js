@@ -169,6 +169,9 @@ document.addEventListener('DOMContentLoaded', function() {
         ) {
             isEligibleMessage.classList.remove('hidden');
             isEligibleMessage.classList.add('flex');
+            setTimeout(() => {
+                window.open('https://candidater.monaco.edu/#/ium', '_blank');
+            }, 1000)
         } else {
             isNotEligibleMessage.classList.remove('hidden');
             isNotEligibleMessage.classList.add('flex');
