@@ -4,11 +4,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'tungsten': ['Tungsten', 'sans-serif'],
-        'raleway': ['raleway', 'sans-serif']
+        'inseecu': ['inseec-u-medium', 'sans-serif'],
+        'inter': ['Inter', 'sans-serif']
       },
       fontSize: {
-        'h5': '48px',
+        'h5': '32px',
         'h6': '20px',
         'button': '16px',
         'p': '16px',

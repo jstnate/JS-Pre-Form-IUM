@@ -155,8 +155,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to display the final message based on form inputs
     function displayFinalMessage(e) {
         e.preventDefault();
-        const englishLevelChoice = document.querySelector('input[name="english-level"]:checked');
-        const isAwareAboutTuitionFees = document.querySelector('input[name="aware-abt-fees"]:checked');
+        const userResidence = document.querySelector('input[name="residence"]:checked');
+        const userBudget = document.querySelector('input[name="budget"]:checked');
+        const speakingLevel = document.querySelector('input[name="speaking-level"]:checked');
 
         // Hide the form
         preform.classList.remove('flex');
@@ -164,13 +165,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Display appropriate message based on form inputs
         if (
-            (englishLevelChoice.value === 'intermediate' || englishLevelChoice.value === 'advance' || englishLevelChoice.value === 'native')
-            && isAwareAboutTuitionFees.value === 'aware'
+            userResidence.value === 'no' && userBudget.value !== 'small' && speakingLevel.value !== 'beginner'
         ) {
             isEligibleMessage.classList.remove('hidden');
             isEligibleMessage.classList.add('flex');
             setTimeout(() => {
-                window.open('https://candidater.monaco.edu/#/ium', '_blank');
+                window.open('https://candidater.omneseducation.com/#/international', '_blank');
             }, 1000)
         } else {
             isNotEligibleMessage.classList.remove('hidden');
@@ -193,12 +193,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if(innerWidth < 768) {
             const width = parseInt(computedStyle.width) - (parseInt(computedStyle.paddingRight) * 2)
-
-            for (let i = 1; i <= 3; i++) {
-                document.getElementById(`slide-${i}`).style.width = `${width}px`
+            for (let i = 1; i <= 5; i++) {
+                document.getElementById(`slide-${i}`).style.width = `${width}px`;
             }
         } else {
-            for (let i = 1; i <= 3; i++) {
+            for (let i = 1; i <= 5; i++) {
                 document.getElementById(`slide-${i}`).style.cssText = ''
             }
         }
@@ -215,21 +214,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Event handler for form submission
         preform.onsubmit = displayFinalMessage;
     };
-
-    window.addEventListener('resize', () => {
-        if(innerWidth < 768) {
-            const width = parseInt(computedStyle.width) - (parseInt(computedStyle.paddingRight) * 2)
-
-            for (let i = 1; i <= 3; i++) {
-                document.getElementById(`slide-${i}`).style.width = `${width}px`
-            }
-        } else {
-            for (let i = 1; i <= 3; i++) {
-                document.getElementById(`slide-${i}`).style.cssText = ''
-            }
-        }
-        slideAction(index)
-    })
 });
 
 

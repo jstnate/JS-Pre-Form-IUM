@@ -544,6 +544,16 @@ video {
   margin-bottom: 0px;
 }
 
+.my-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -551,6 +561,10 @@ video {
 
 .mb-2 {
   margin-bottom: 0.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
 }
 
 .ml-1 {
@@ -569,8 +583,44 @@ video {
   margin-top: 0px;
 }
 
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
+}
+
+.mt-14 {
+  margin-top: 3.5rem;
+}
+
 .mt-16 {
   margin-top: 4rem;
+}
+
+.mt-20 {
+  margin-top: 5rem;
+}
+
+.mt-24 {
+  margin-top: 6rem;
+}
+
+.mt-28 {
+  margin-top: 7rem;
+}
+
+.mt-32 {
+  margin-top: 8rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .mt-6 {
@@ -579,6 +629,10 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
 }
 
 .block {
@@ -633,12 +687,20 @@ video {
   min-height: 100%;
 }
 
-.min-h-\[100\%\] {
-  min-height: 100%;
-}
-
 .w-12 {
   width: 3rem;
+}
+
+.w-3 {
+  width: 0.75rem;
+}
+
+.w-4 {
+  width: 1rem;
+}
+
+.w-4\/6 {
+  width: 66.666667%;
 }
 
 .w-\[5px\] {
@@ -759,6 +821,11 @@ video {
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
+.bg-gray-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+}
+
 .bg-inseec-purple {
   --tw-bg-opacity: 1;
   background-color: rgb(93 2 130 / var(--tw-bg-opacity));
@@ -806,12 +873,12 @@ video {
   padding-top: 0.5rem;
 }
 
-.font-raleway {
-  font-family: raleway, sans-serif;
+.font-inseecu {
+  font-family: inseec-u-medium, sans-serif;
 }
 
-.font-tungsten {
-  font-family: Tungsten, sans-serif;
+.font-inter {
+  font-family: Inter, sans-serif;
 }
 
 .text-button {
@@ -819,7 +886,7 @@ video {
 }
 
 .text-h5 {
-  font-size: 48px;
+  font-size: 32px;
 }
 
 .text-h6 {
@@ -845,6 +912,11 @@ video {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.text-inseec-purple {
+  --tw-text-opacity: 1;
+  color: rgb(93 2 130 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -916,8 +988,16 @@ video {
     margin-top: 0px;
   }
 
+  .md\:mt-12 {
+    margin-top: 3rem;
+  }
+
   .md\:mt-16 {
     margin-top: 4rem;
+  }
+
+  .md\:mt-20 {
+    margin-top: 5rem;
   }
 
   .md\:flex {

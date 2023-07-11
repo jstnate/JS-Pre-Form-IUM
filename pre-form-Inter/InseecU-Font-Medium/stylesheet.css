@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'inseec-u-medium';
+    src: url('inseec-medium-webfont.woff2') format('woff2'),
+         url('inseec-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
+
+@font-face {
+    font-family: 'inseec_u_medium';
+    src: url('inseecumedium-webfont.woff2') format('woff2'),
+         url('inseecumedium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+
+}
