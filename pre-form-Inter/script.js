@@ -166,8 +166,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const buttonSlide = document.getElementById(`next-slide-${id}`);
 
         if (buttonSlide) {
-            nextSlideIndex = (parseInt(computedStyle.width) * index) - (parseInt(computedStyle.paddingRight) * index - 30 * index)
-            currentSlideIndex = (parseInt(computedStyle.width) * (index - 1))  - (parseInt(computedStyle.paddingRight) * index - 30 * index)
+
+            if (window.innerWidth < 768) {
+                nextSlideIndex = (parseInt(computedStyle.width) * index) - (parseInt(computedStyle.paddingRight) * index - 30 * index)
+                currentSlideIndex = (parseInt(computedStyle.width) * (index - 1))  - (parseInt(computedStyle.paddingRight) * index - 30 * index)
+            } else {
+                nextSlideIndex = (parseInt(computedStyle.width) * index) - (parseInt(computedStyle.paddingRight) * index)
+                currentSlideIndex = (parseInt(computedStyle.width) * (index - 1))  - (parseInt(computedStyle.paddingRight) * index)
+            }
+
+
             // Set onclick event for the slide button
             buttonSlide.onclick = function () {
                 displaySlide(currentSlideIndex, nextSlideIndex);
@@ -246,7 +254,52 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Event handler for form submission
         preform.onsubmit = displayFinalMessage;
-    };
+
+// Détecter la langue du navigateur
+        const userLang = navigator.language || navigator.userLanguage;
+
+        // Textes en anglais pour la traduction
+        const enTranslation = {
+            'Admission Internationale' : 'International Admission',
+            'Avant de commencer, vérifions ensemble si nos programmes vous correspondent.' : 'Before we begin, let\'s check if our programs are right for you.',
+            "Cette procédure d'admission internationale est à destination des étudiants étrangers résidants hors de France." : "This international admission procedure is designed for foreign students living outside France.",
+            'Si vous êtes déjà en France, cliquez sur le bouton "Candidature Nationale"' : 'If you are already in France, click on the "Candidature Nationale" button.',
+            "Êtes-vous résident en France ?" : "Are you a resident of France?",
+            "Je suis étudiant international résident hors de France" : "I am an international student living outside France",
+            "Je suis étudiant international résident en France" : "I am an international student living in France",
+            "Quel est votre budget annuel d'étude ?" : "What is your annual study budget?",
+            "Moins de 7 000 euros par an" : "Less than 7,000 euros a year",
+            "Entre 7 000 et 12 000 euros par an" : "Between 7,000 and 12,000 euros per year",
+            "Plus de 12 000 euros par an" : "More than 12,000 euros a year",
+            "Dans quelle langue souhaitez-vous réaliser vos études ?" : "In which language would you like to study?",
+            "Français" : "French",
+            "Anglais" : "English",
+            "Quel est votre niveau dans la langue d'enseignement ?" : "What is your level in the language of instruction?",
+            "Débutant (A1-A2)" : "Beginner (A1-A2)",
+            "Intermédiaire (B1-B2)" : "Intermediate (B1-B2)",
+            "Confirmé (C1-C2)" : "Advanced (C1-C2)",
+            "Nous vous remercions pour l’intérêt que vous portez à nos formations." : "Thank you for your interest in our training courses.",
+            "Attention, afin de pouvoir candidater, nous exigeons un niveau minimum intermédiaire (B2) dans la langue d’enseignement." : "Please note that in order to apply, we require a minimum intermediate level (B2) in the language of instruction.",
+            "Aussi, nos formations commencent à partir à 7000 € par an." : "Our training courses start at €7000 per year.",
+            "N’hésitez pas à nous contacter si besoin :" : "Don't hesitate to contact us:",
+            "L'Equipe des admissions internationales" : "International Admissions Team",
+            "Vous êtes éligible à la candidature." : "You are eligible to apply.",
+            "Vous allez être redirigé vers le formulaire de candidature dans quelques secondes." : "You'll be redirected to the application form in a few seconds.",
+            "Si ce n’est pas le cas, cliquez sur le lien ci-dessous :" : "If not, click on the link below:",
+            "Lien vers le formulaire de candidature" : "Link to application form"
+        };
+
+        // Traduire si la langue du navigateur n'est pas en français
+        if (!userLang.startsWith('fr')) {
+            const elements = document.querySelectorAll("h5, h6, p, a, label");
+
+            elements.forEach(el => {
+                const text = el.textContent.trim();
+                if (enTranslation[text]) {
+                    el.textContent = enTranslation[text];
+                }
+            });
+        }    };
 });
 
 
