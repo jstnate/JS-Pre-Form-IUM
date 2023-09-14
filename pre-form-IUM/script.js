@@ -180,39 +180,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Generate the preform
         // generatePreform();
 
-        // Get additional DOM elements
-        preform = document.querySelector('form#preform');
-        preformSlider = document.getElementById('preform-slider');
-        isEligibleMessage = document.getElementById('slide-eligible');
-        isNotEligibleMessage = document.getElementById('slide-not-eligible');
-        closePreform = document.getElementById('close-preform');
-        console.log(preform)
-        computedStyle = window.getComputedStyle(document.querySelector('form#preform'))
-
-        if(innerWidth < 768) {
-            const width = parseInt(computedStyle.width) - (parseInt(computedStyle.paddingRight) * 2)
-
-            for (let i = 1; i <= 3; i++) {
-                document.getElementById(`slide-${i}`).style.width = `${width}px`
-            }
-        } else {
-            for (let i = 1; i <= 3; i++) {
-                document.getElementById(`slide-${i}`).style.cssText = ''
-            }
-        }
-
-        // Set up slide action for the initial slide
-        slideAction(index);
-
-        // Event handler for closing the "not eligible" message
-        closePreform.onclick = function () {
-            isNotEligibleMessage.classList.remove('flex');
-            isNotEligibleMessage.classList.add('hidden');
-        };
-
-        // Event handler for form submission
-        preform.onsubmit = displayFinalMessage;
-
         // Détecter la langue du navigateur
         const userLang = navigator.language || navigator.userLanguage;
 
@@ -251,6 +218,38 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         }
+
+        // Get additional DOM elements
+        preform = document.querySelector('form#preform');
+        preformSlider = document.getElementById('preform-slider');
+        isEligibleMessage = document.getElementById('slide-eligible');
+        isNotEligibleMessage = document.getElementById('slide-not-eligible');
+        closePreform = document.getElementById('close-preform');
+        computedStyle = window.getComputedStyle(preform)
+
+        if(innerWidth < 768) {
+            const width = parseInt(computedStyle.width) - (parseInt(computedStyle.paddingRight) * 2)
+
+            for (let i = 1; i <= 3; i++) {
+                document.getElementById(`slide-${i}`).style.width = `${width}px`
+            }
+        } else {
+            for (let i = 1; i <= 3; i++) {
+                document.getElementById(`slide-${i}`).style.cssText = ''
+            }
+        }
+
+        // Set up slide action for the initial slide
+        slideAction(index);
+
+        // Event handler for closing the "not eligible" message
+        closePreform.onclick = function () {
+            isNotEligibleMessage.classList.remove('flex');
+            isNotEligibleMessage.classList.add('hidden');
+        };
+
+        // Event handler for form submission
+        preform.onsubmit = displayFinalMessage;
     };
 
     window.addEventListener('resize', () => {
