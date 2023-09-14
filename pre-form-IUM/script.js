@@ -211,6 +211,45 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Event handler for form submission
         preform.onsubmit = displayFinalMessage;
+
+        // Détecter la langue du navigateur
+        const userLang = navigator.language || navigator.userLanguage;
+
+        // Textes en anglais pour la traduction
+        const enTranslation = {
+            "Welcome to the International University of Monaco! Thank you for your interest. Before you start your application, we have a few questions for you.": "Bienvenue à l'Université Internationale de Monaco ! Merci de votre intérêt. Avant de commencer votre candidature, nous avons quelques questions à vous poser.",
+            "Continue": "Continuer",
+            "What is your English level ?": "Quel est votre niveau d'anglais ?",
+            "I don't speak English": "Je ne parle pas anglais",
+            "Next": "Suivant",
+            "Do you know the steps to apply ?": "Connaissez-vous les étapes pour postuler ?",
+            "Fill in the application form and upload your documents": "Remplissez le formulaire de candidature et téléchargez vos documents",
+            "Pay the application fee from 70 to 80 euros": "Payer les frais de candidature de 70 à 80 euros",
+            "Wait for you eligibility": "Attendez votre éligibilité",
+            "Yes": "Oui",
+            "No": "Non",
+            "Submit": "Soumettre",
+            "Thank for your interest in our University.": "Merci de votre intérêt pour notre Université.",
+            "It looks like you are not eligible to apply for this program according to the answers you provided. However, we would be delighted to guide you and to tell you more about another program that would be suitable for your profile.": "Il semblerait que vous ne soyez pas éligible pour ce programme selon les réponses que vous avez fournies. Cependant, nous serions ravis de vous orienter et de vous en dire plus sur un autre programme qui conviendrait à votre profil.",
+            "In case of any doubt, please contact the Admissions Team at admissions@monaco.edu or at +377 97 98 69 96": "En cas de doute, veuillez contacter l'équipe des admissions à admissions@monaco.edu ou au +377 97 98 69 96",
+            "Close": "Fermer",
+            "You are eligible to apply.": "Vous êtes éligible pour postuler.",
+            "You will be redirected to the application form in a few seconds. If not, click the link below :": "Vous serez redirigé vers le formulaire de candidature dans quelques secondes. Si ce n'est pas le cas, cliquez sur le lien ci-dessous :",
+            "Link to application form": "Lien vers le formulaire de candidature"
+        };
+
+        // Traduire si la langue du navigateur n'est pas en français
+        if (userLang.startsWith('fr')) {
+            console.log('traduction en cours')
+            const elements = document.querySelectorAll("h5, h6, p, a, label");
+
+            elements.forEach(el => {
+                const text = el.textContent.trim();
+                if (enTranslation[text]) {
+                    el.textContent = enTranslation[text];
+                }
+            });
+        }
     };
 
     window.addEventListener('resize', () => {
@@ -227,45 +266,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         slideAction(index)
     });
-
-    // Détecter la langue du navigateur
-    const userLang = navigator.language || navigator.userLanguage;
-
-    // Textes en anglais pour la traduction
-    const enTranslation = {
-        "Welcome to the International University of Monaco! Thank you for your interest. Before you start your application, we have a few questions for you.": "Bienvenue à l'Université Internationale de Monaco ! Merci de votre intérêt. Avant de commencer votre candidature, nous avons quelques questions à vous poser.",
-        "Continue": "Continuer",
-        "What is your English level ?": "Quel est votre niveau d'anglais ?",
-        "I don't speak English": "Je ne parle pas anglais",
-        "Next": "Suivant",
-        "Do you know the steps to apply ?": "Connaissez-vous les étapes pour postuler ?",
-        "Fill in the application form and upload your documents": "Remplissez le formulaire de candidature et téléchargez vos documents",
-        "Pay the application fee from 70 to 80 euros": "Payer les frais de candidature de 70 à 80 euros",
-        "Wait for you eligibility": "Attendez votre éligibilité",
-        "Yes": "Oui",
-        "No": "Non",
-        "Submit": "Soumettre",
-        "Thank for your interest in our University.": "Merci de votre intérêt pour notre Université.",
-        "It looks like you are not eligible to apply for this program according to the answers you provided. However, we would be delighted to guide you and to tell you more about another program that would be suitable for your profile.": "Il semblerait que vous ne soyez pas éligible pour ce programme selon les réponses que vous avez fournies. Cependant, nous serions ravis de vous orienter et de vous en dire plus sur un autre programme qui conviendrait à votre profil.",
-        "In case of any doubt, please contact the Admissions Team at admissions@monaco.edu or at +377 97 98 69 96": "En cas de doute, veuillez contacter l'équipe des admissions à admissions@monaco.edu ou au +377 97 98 69 96",
-        "Close": "Fermer",
-        "You are eligible to apply.": "Vous êtes éligible pour postuler.",
-        "You will be redirected to the application form in a few seconds. If not, click the link below :": "Vous serez redirigé vers le formulaire de candidature dans quelques secondes. Si ce n'est pas le cas, cliquez sur le lien ci-dessous :",
-        "Link to application form": "Lien vers le formulaire de candidature"
-    };
-
-    // Traduire si la langue du navigateur n'est pas en français
-    if (userLang.startsWith('fr')) {
-        console.log('traduction en cours')
-        const elements = document.querySelectorAll("h5, h6, p, a, label");
-
-        elements.forEach(el => {
-            const text = el.textContent.trim();
-            if (enTranslation[text]) {
-                el.textContent = enTranslation[text];
-            }
-        });
-    }
 
 });
 
