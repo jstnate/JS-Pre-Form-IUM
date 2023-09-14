@@ -256,6 +256,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Traduire si la langue du navigateur n'est pas en français
     if (userLang.startsWith('fr')) {
+        console.log('traduction en cours')
         const elements = document.querySelectorAll("h5, h6, p, a, label");
 
         elements.forEach(el => {
