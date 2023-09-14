@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
         isNotEligibleMessage = document.getElementById('slide-not-eligible');
         closePreform = document.getElementById('close-preform');
         console.log(preform)
-        computedStyle = window.getComputedStyle(preform)
+        computedStyle = window.getComputedStyle(document.querySelector('form#preform'))
 
         if(innerWidth < 768) {
             const width = parseInt(computedStyle.width) - (parseInt(computedStyle.paddingRight) * 2)
