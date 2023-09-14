@@ -186,6 +186,7 @@ document.addEventListener('DOMContentLoaded', function() {
         isEligibleMessage = document.getElementById('slide-eligible');
         isNotEligibleMessage = document.getElementById('slide-not-eligible');
         closePreform = document.getElementById('close-preform');
+        console.log(preform)
         computedStyle = window.getComputedStyle(preform)
 
         if(innerWidth < 768) {
