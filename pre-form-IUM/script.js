@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // generatePreform();
 
         // Get additional DOM elements
-        preform = document.getElementById('preform');
+        preform = document.querySelector('form#preform');
         preformSlider = document.getElementById('preform-slider');
         isEligibleMessage = document.getElementById('slide-eligible');
         isNotEligibleMessage = document.getElementById('slide-not-eligible');
