@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // Traduire si la langue du navigateur n'est pas en français
-    if (!userLang.startsWith('fr')) {
+    if (userLang.startsWith('fr')) {
         const elements = document.querySelectorAll("h5, h6, p, a, label");
 
         elements.forEach(el => {
