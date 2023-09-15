@@ -262,8 +262,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const enTranslation = {
             'Admission Internationale' : 'International Admission',
             'Avant de commencer, vérifions ensemble si nos programmes vous correspondent.' : 'Before we begin, let\'s check if our programs are right for you.',
-            "Cette procédure d'admission internationale est à destination des étudiants étrangers résidants hors de France." : "This international admission procedure is designed for foreign students living outside France.",
-            'Si vous êtes déjà en France, cliquez sur le bouton "Candidature Nationale"' : 'If you are already in France, click on the "Candidature Nationale" button.',
+            'Cette procédure d\'admission internationale est à destination des étudiants étrangers résidants hors de France. Si vous êtes déjà en France, je vous invite à candidater directement sur le site des écoles' : "This international admission procedure is intended for foreign students living outside France. If you are already in France, please apply directly on the schools' websites",
+            'Continuer' : 'Continue',
+            'Candidature nationale' : 'National application',
+            'Soumettre' : 'Submit',
             "Êtes-vous résident en France ?" : "Are you a resident of France?",
             "Je suis étudiant international résident hors de France" : "I am an international student living outside France",
             "Je suis étudiant international résident en France" : "I am an international student living in France",
@@ -279,14 +281,15 @@ document.addEventListener('DOMContentLoaded', function() {
             "Intermédiaire (B1-B2)" : "Intermediate (B1-B2)",
             "Confirmé (C1-C2)" : "Advanced (C1-C2)",
             "Nous vous remercions pour l’intérêt que vous portez à nos formations." : "Thank you for your interest in our training courses.",
-            "Attention, afin de pouvoir candidater, nous exigeons un niveau minimum intermédiaire (B2) dans la langue d’enseignement." : "Please note that in order to apply, we require a minimum intermediate level (B2) in the language of instruction.",
+            "Attention, afin de pouvoir candidater, nous exigeons un niveau minimum intermédiaire (B2) dans la langue d’enseignement. <br class=\"my-2\"/> Aussi, nos formations commencent à partir à 7000 € par an." : "Please note that in order to apply, we require a minimum intermediate level (B2) in the language of instruction. <br class=\"my-2\" /> Our training courses start at €7000 per year.",
             "Aussi, nos formations commencent à partir à 7000 € par an." : "Our training courses start at €7000 per year.",
-            "N’hésitez pas à nous contacter si besoin :" : "Don't hesitate to contact us:",
-            "L'Equipe des admissions internationales" : "International Admissions Team",
+            "N’hésitez pas à nous contacter si besoin : <a href=\"mailto:internationaladmissions@omneseducation.com\" class=\"my-2 font-inter font-normal text-p underline text-inseec-purple hover:text-black transition\">internationaladmissions@omneseducation.com</a> <a class=\"font-inter font-normal text-p underline text-inseec-purple hover:text-black transition\">+33 01 53 38 84 30</a>" : "Don't hesitate to contact us: <a href=\"mailto:internationaladmissions@omneseducation.com\" class=\"my-2 font-inter font-normal text-underline text-inseec-purple hover:text-black transition\">internationaladmissions@omneseducation.com</a> <a class=\"font-inter font-normal text-underline text-inseec-purple hover:text-blacktransition\">+33 01 53 38 84 30</a>",
+            "L'Equipe des admissions internationales <br className=\"my-1\"> Omnes Education" : "International Admissions Team <br className=\"my-1\"> Omnes Education",
             "Vous êtes éligible à la candidature." : "You are eligible to apply.",
             "Vous allez être redirigé vers le formulaire de candidature dans quelques secondes." : "You'll be redirected to the application form in a few seconds.",
             "Si ce n’est pas le cas, cliquez sur le lien ci-dessous :" : "If not, click on the link below:",
-            "Lien vers le formulaire de candidature" : "Link to application form"
+            "Lien vers le formulaire de candidature" : "Link to application form",
+            'Fermer' : 'Close'
         };
 
         // Traduire si la langue du navigateur n'est pas en français
