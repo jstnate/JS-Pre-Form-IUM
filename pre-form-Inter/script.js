@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Traduire si la langue du navigateur n'est pas en français
         if (!userLang.startsWith('fr')) {
-            const elements = document.querySelectorAll("h5, h6, p, a, label");
+            const elements = document.querySelectorAll("h5, h6, p, a, label, button");
 
             elements.forEach(el => {
                 const text = el.textContent.trim();
