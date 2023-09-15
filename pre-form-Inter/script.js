@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Event handler for form submission
         preform.onsubmit = displayFinalMessage;
 
-// Détecter la langue du navigateur
+        // Détecter la langue du navigateur
         const userLang = navigator.language || navigator.userLanguage;
 
         // Textes en anglais pour la traduction
@@ -297,12 +297,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const elements = document.querySelectorAll("h5, h6, p, a, label");
 
             elements.forEach(el => {
-                const text = el.textContent.trim();
+                const text = el.innerHTML.trim();
                 if (enTranslation[text]) {
                     el.textContent = enTranslation[text];
                 }
             });
-        }    };
+        }
+    };
 });
 
 
