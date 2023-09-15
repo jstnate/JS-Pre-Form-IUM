@@ -297,7 +297,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const elements = document.querySelectorAll("h5, h6, p, a, label");
 
             elements.forEach(el => {
-                const text = el.innerHTML.trim();
+                const text = el.textContent.trim();
                 if (enTranslation[text]) {
                     el.textContent = enTranslation[text];
                 }
