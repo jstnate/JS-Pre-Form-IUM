@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const enTranslation = {
             'Admission Internationale' : 'International Admission',
             'Avant de commencer, vérifions ensemble si nos programmes vous correspondent.' : 'Before we begin, let\'s check if our programs are right for you.',
-            'Cette procédure d\'admission internationale est à destination des étudiants étrangers résidants hors de France.' : "This international admission procedure is intended for foreign students living outside France.",
+            'Cette procédure d’admission internationale est à destination d’étudiant étrangers résident hors de France.' : "This international admission procedure is intended for foreign students living outside France.",
             "Si vous êtes déjà en France, je vous invite à candidater directement sur le site des écoles." : "If you are already in France, please apply directly on the schools' websites",
             'Continuer' : 'Continue',
             'Candidature nationale' : 'National application',
