@@ -185,31 +185,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Textes en anglais pour la traduction
         const enTranslation = {
-            "Welcome to the International University of Monaco! Thank you for your interest. Before you start your application, we have a few questions for you.": "Bienvenue à l'Université Internationale de Monaco ! Merci de votre intérêt. Avant de commencer votre candidature, nous avons quelques questions à vous poser.",
-            "Continue": "Continuer",
-            "What is your English level ?": "Quel est votre niveau d'anglais ?",
-            "I don't speak English": "Je ne parle pas anglais",
-            "Next": "Suivant",
-            "Do you know the steps to apply ?": "Connaissez-vous les étapes pour postuler ?",
-            "Fill in the application form and upload your documents": "Remplissez le formulaire de candidature et téléchargez vos documents",
-            "Pay the application fee from 70 to 80 euros": "Payer les frais de candidature de 70 à 80 euros",
-            "Wait for you eligibility": "Attendez votre éligibilité",
-            "Yes": "Oui",
-            "No": "Non",
-            "Submit": "Soumettre",
-            "Thank for your interest in our University.": "Merci de votre intérêt pour notre Université.",
-            "It looks like you are not eligible to apply for this program according to the answers you provided. However, we would be delighted to guide you and to tell you more about another program that would be suitable for your profile.": "Il semblerait que vous ne soyez pas éligible pour ce programme selon les réponses que vous avez fournies. Cependant, nous serions ravis de vous orienter et de vous en dire plus sur un autre programme qui conviendrait à votre profil.",
-            "In case of any doubt, please contact the Admissions Team at admissions@monaco.edu or at +377 97 98 69 96": "En cas de doute, veuillez contacter l'équipe des admissions à admissions@monaco.edu ou au +377 97 98 69 96",
-            "Close": "Fermer",
-            "You are eligible to apply.": "Vous êtes éligible pour postuler.",
-            "You will be redirected to the application form in a few seconds. If not, click the link below :": "Vous serez redirigé vers le formulaire de candidature dans quelques secondes. Si ce n'est pas le cas, cliquez sur le lien ci-dessous :",
-            "Link to application form": "Lien vers le formulaire de candidature"
+            "Questions d'éligibilité" : "Eligibility Questions",
+            "Bienvenue à l'Université Internationale de Monaco ! Nous vous remercions de votre intérêt." : "Welcome to the International University of Monaco! Thank you for your interest.",
+            "Avant de commencer votre candidature, nous avons quelques questions à vous poser." : "Before you start your application, we'd like to ask you a few questions.",
+            "Continuer" : "Continue",
+            "Quel est votre niveau d'anglais ?" : "What's your level of English?",
+            "Je ne parle pas anglais" : "I don't speak englis",
+            "Débutant (A1-A2)" : "Beginner (A1-A2)",
+            "Intermédiaire (B1-B2)" : "Intermediate (B1-B2)",
+            "Avancé (C1)" : "Advanced (C1)",
+            "Natif (C2)" : "Native (C2)",
+            "Suivant" : "Next",
+            "Connaissez-vous les étapes pour candidater ?" : "Are you aware about the steps to apply ?",
+            "Etape 1" : "Step 1",
+            "Etape 2" : "Step 2",
+            "Etape 3" : "Step 3",
+            "Remplir le formulaire de demande et télécharger vos documents" : "Fill in the application form and upload your documents",
+            "Payez les frais de dossier de " : "Pay the application fee from",
+            "70 à 80 euros" : "70 to 80 euros",
+            "L'équipe d'admission vous informera de votre admissibilité." : "The admissions team will let you know about your eligibility.",
+            "Oui" : "Yes",
+            "Non" : "No",
+            "Soumettre" : "Submit",
+            "Nous vous remercions de l'intérêt que vous portez à notre université." : "Thank you for your interest in our university.",
+            "D'après les réponses que vous avez fournies, il semble que vous ne soyez pas éligible pour ce programme." : "From the answers you've given, it seems that you're not eligible for this program.",
+            "Cependant, nous serions ravis de vous guider et de vous renseigner sur un autre programme qui conviendrait à votre profil." : "However, we'd be delighted to guide you and tell you about another program that suits your profile.",
+            "En cas de doute, veuillez contacter l'équipe chargée des admissions à l'adresse suivante :" : "If in doubt, please contact the admissions team at the following address",
+            "ou à" : "or at",
+            "Fermer" : "Close",
+            "Vous êtes éligible à la candidature." : "You are eligible to apply.",
+            "Vous serez redirigé vers le formulaire de candidature dans quelques secondes." : "You'll be redirected to the application form in a few seconds.",
+            "Si ce n'est pas le cas, cliquez sur le lien ci-dessous :" : "If not, click on the link below:",
+            "Lien vers le formulaire de candidature" : "Link to application form"
         };
 
         // Traduire si la langue du navigateur n'est pas en français
-        if (userLang.startsWith('fr')) {
-            console.log('traduction en cours')
-            const elements = document.querySelectorAll("h5, h6, p, a, label");
+        if (!userLang.startsWith('fr')) {
+            const elements = document.querySelectorAll(".to-translate");
 
             elements.forEach(el => {
                 const text = el.textContent.trim();
