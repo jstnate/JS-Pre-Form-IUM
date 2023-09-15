@@ -289,12 +289,13 @@ document.addEventListener('DOMContentLoaded', function() {
             "Vous allez être redirigé vers le formulaire de candidature dans quelques secondes." : "You'll be redirected to the application form in a few seconds.",
             "Si ce n’est pas le cas, cliquez sur le lien ci-dessous :" : "If not, click on the link below:",
             "Lien vers le formulaire de candidature" : "Link to application form",
-            'Fermer' : 'Close'
+            'Fermer' : 'Close',
+            'Lien vers le formulaire de candidature' : 'Link to application form'
         };
 
         // Traduire si la langue du navigateur n'est pas en français
         if (!userLang.startsWith('fr')) {
-            const elements = document.querySelectorAll("h5, h6, p, a, label, button");
+            const elements = document.querySelectorAll(".to-translate");
 
             elements.forEach(el => {
                 const text = el.textContent.trim();
