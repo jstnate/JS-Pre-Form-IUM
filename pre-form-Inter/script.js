@@ -167,13 +167,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (buttonSlide) {
 
-            if (window.innerWidth < 768) {
+            // if (window.innerWidth < 768) {
                 nextSlideIndex = (parseInt(computedStyle.width) * index) - (parseInt(computedStyle.paddingRight) * index - 30 * index)
                 currentSlideIndex = (parseInt(computedStyle.width) * (index - 1))  - (parseInt(computedStyle.paddingRight) * index - 30 * index)
-            } else {
-                nextSlideIndex = (parseInt(computedStyle.width) * index) - (parseInt(computedStyle.paddingRight) * index)
-                currentSlideIndex = (parseInt(computedStyle.width) * (index - 1))  - (parseInt(computedStyle.paddingRight) * index)
-            }
+            // } else {
+            //     nextSlideIndex = (parseInt(computedStyle.width) * index) - (parseInt(computedStyle.paddingRight) * index - 30 * index)
+            //     currentSlideIndex = (parseInt(computedStyle.width) * (index - 1))  - (parseInt(computedStyle.paddingRight) * index - 30 * index)
+            // }
 
 
             // Set onclick event for the slide button
