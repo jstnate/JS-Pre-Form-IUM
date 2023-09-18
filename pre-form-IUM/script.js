@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
             isNotEligibleMessage.classList.add('flex');
 
             if (window.innerWidth < 768) {
-                isNotEligibleMessage.style.width = `${(window.innerWidth - 30)}px`
+                isNotEligibleMessage.style.width = `${window.innerWidth}px`
             }
         }
     }
