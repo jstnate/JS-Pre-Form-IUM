@@ -179,8 +179,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 nextSlideIndex = (490 * index)
                 currentSlideIndex = (490 * (index + 1))
             } else {
-                nextSlideIndex = (425 * index)
-                currentSlideIndex = (425 * (index + 1))
+                nextSlideIndex = (480 * index)
+                currentSlideIndex = (480 * (index + 1))
             }
 
             // Set onclick event for the slide button
