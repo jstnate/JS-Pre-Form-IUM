@@ -164,17 +164,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to handle slide actions
     function slideAction(id) {
         const buttonSlide = document.getElementById(`next-slide-${id}`);
+        const slideElement = document.getElementById(`slide-${id}`);
+        const slideComputedStyle = window.getComputedStyle(slideElement);
+        const slideWidth = parseInt(slideComputedStyle.width);
+        const slidePadding = parseInt(slideComputedStyle.paddingRight);
 
         if (buttonSlide) {
-            if (window.innerWidth > 768) {
-                nextSlideIndex = (parseInt(computedStyle.width) * index) - (parseInt(computedStyle.paddingRight) * index - 30 * index)
-                currentSlideIndex = (parseInt(computedStyle.width) * (index - 1))  - (parseInt(computedStyle.paddingRight) * index - 30 * index)
-            } else {
-                nextSlideIndex = (parseInt(computedStyle.width) * index) - (parseInt(computedStyle.paddingRight) * index - 30 * index)
-                currentSlideIndex = (parseInt(computedStyle.width) * (index - 1))  - (parseInt(computedStyle.paddingRight) * index - 30 * index)
-            }
+            let nextSlideIndex = (slideWidth + slidePadding) * index;
+            let currentSlideIndex = (slideWidth + slidePadding) * (index - 1);
 
-            // Set onclick event for the slide button
             buttonSlide.onclick = function () {
                 displaySlide(currentSlideIndex, nextSlideIndex);
             };
@@ -183,11 +181,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to display a slide
     function displaySlide(removeTransformWidth, addTransformWidth) {
-        index >= 1 ? preformSlider.style.cssText = `transform: translateX(-${removeTransformWidth}px)` : ""
-        preformSlider.style.cssText = `transform: translateX(-${addTransformWidth}px)`
+        index >= 1 ? preformSlider.style.cssText = `transform: translateX(-${removeTransformWidth}px)` : "";
+        preformSlider.style.cssText = `transform: translateX(-${addTransformWidth}px)`;
 
         index++;
-        // Set up slide action for the next slide
         slideAction(index);
     }
 
@@ -241,16 +238,15 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
 
-        // Set up slide action for the initial slide
+        // Configurer l'action de glissement pour le premier slide
         slideAction(index);
 
-        // Event handler for closing the "not eligible" message
+        // Gestionnaires d'événements
         closePreform.onclick = function () {
             isNotEligibleMessage.classList.remove('flex');
             isNotEligibleMessage.classList.add('hidden');
         };
 
-        // Event handler for form submission
         preform.onsubmit = displayFinalMessage;
 
         // Détecter la langue du navigateur
