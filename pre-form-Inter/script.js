@@ -170,8 +170,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const slidePadding = parseInt(slideComputedStyle.paddingRight);
 
         if (buttonSlide) {
-            let nextSlideIndex = (slideWidth + slidePadding) + (48 * index);
-            let currentSlideIndex = (slideWidth + slidePadding) + (48 * index - 1);
+            let nextSlideIndex = (slideWidth + slidePadding) * index + (48 * index);
+            let currentSlideIndex = (slideWidth + slidePadding) * index + (48 * index - 1);
 
             buttonSlide.onclick = function () {
                 displaySlide(currentSlideIndex, nextSlideIndex);
