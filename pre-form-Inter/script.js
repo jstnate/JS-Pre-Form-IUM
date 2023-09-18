@@ -175,8 +175,13 @@ document.addEventListener('DOMContentLoaded', function() {
             //     currentSlideIndex = (parseInt(computedStyle.width) * (index - 1))  - (parseInt(computedStyle.paddingRight) * index - 30 * index)
             // }
 
+            if (window.innerWidth > 768) {
                 nextSlideIndex = (490 * index)
                 currentSlideIndex = (490 * (index + 1))
+            } else {
+                nextSlideIndex = (425 * index)
+                currentSlideIndex = (425 * (index + 1))
+            }
 
             // Set onclick event for the slide button
             buttonSlide.onclick = function () {
