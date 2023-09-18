@@ -166,21 +166,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const buttonSlide = document.getElementById(`next-slide-${id}`);
 
         if (buttonSlide) {
-
-            // if (window.innerWidth < 768) {
-            //     nextSlideIndex = (parseInt(computedStyle.width) * index) - (parseInt(computedStyle.paddingRight) * index - 30 * index)
-            //     currentSlideIndex = (parseInt(computedStyle.width) * (index - 1))  - (parseInt(computedStyle.paddingRight) * index - 30 * index)
-            // } else {
-            //     nextSlideIndex = (parseInt(computedStyle.width) * index) - (parseInt(computedStyle.paddingRight) * index - 30 * index)
-            //     currentSlideIndex = (parseInt(computedStyle.width) * (index - 1))  - (parseInt(computedStyle.paddingRight) * index - 30 * index)
-            // }
-
             if (window.innerWidth > 768) {
-                nextSlideIndex = (490 * index)
-                currentSlideIndex = (490 * (index + 1))
+                nextSlideIndex = (parseInt(computedStyle.width) * index) - (parseInt(computedStyle.paddingRight) * index - 30 * index)
+                currentSlideIndex = (parseInt(computedStyle.width) * (index - 1))  - (parseInt(computedStyle.paddingRight) * index - 30 * index)
             } else {
-                nextSlideIndex = (480 * index)
-                currentSlideIndex = (480 * (index + 1))
+                nextSlideIndex = (parseInt(computedStyle.width) * index) - (parseInt(computedStyle.paddingRight) * index - 30 * index)
+                currentSlideIndex = (parseInt(computedStyle.width) * (index - 1))  - (parseInt(computedStyle.paddingRight) * index - 30 * index)
             }
 
             // Set onclick event for the slide button
