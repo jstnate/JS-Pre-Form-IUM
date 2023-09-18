@@ -225,6 +225,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             elements.forEach(el => {
                 const text = el.textContent.trim();
+                console.log(text)
                 if (enTranslation[text]) {
                     el.textContent = enTranslation[text];
                 }
