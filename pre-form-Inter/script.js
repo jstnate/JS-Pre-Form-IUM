@@ -211,6 +211,9 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             isNotEligibleMessage.classList.remove('hidden');
             isNotEligibleMessage.classList.add('flex');
+            if (window.innerWidth < 768) {
+                isNotEligibleMessage.style.width = `${(window.innerWidth - 30)}px`
+            }
         }
     }
 
