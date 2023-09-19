@@ -153,17 +153,13 @@ document.addEventListener('DOMContentLoaded', function() {
     function displayFinalMessage(e) {
         e.preventDefault();
         const englishLevelChoice = document.querySelector('input[name="english-level"]:checked');
-        const isAwareAboutTuitionFees = document.querySelector('input[name="aware-abt-fees"]:checked');
 
         // Hide the form
         preform.classList.remove('flex');
         preform.classList.add('hidden');
 
         // Display appropriate message based on form inputs
-        if (
-            (englishLevelChoice.value === 'intermediate' || englishLevelChoice.value === 'advance' || englishLevelChoice.value === 'native')
-            && isAwareAboutTuitionFees.value === 'aware'
-        ) {
+        if (englishLevelChoice.value === 'intermediate' || englishLevelChoice.value === 'advance' || englishLevelChoice.value === 'native') {
             isEligibleMessage.classList.remove('hidden');
             isEligibleMessage.classList.add('flex');
             setTimeout(() => {
