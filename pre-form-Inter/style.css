@@ -530,6 +530,10 @@ video {
   visibility: collapse;
 }
 
+.absolute {
+  position: absolute;
+}
+
 .relative {
   position: relative;
 }
@@ -668,18 +672,6 @@ video {
   height: 100vh;
 }
 
-.h-\[54vh\] {
-  height: 54vh;
-}
-
-.h-\[60vh\] {
-  height: 60vh;
-}
-
-.h-\[95vh\] {
-  height: 95vh;
-}
-
 .h-full {
   height: 100%;
 }
@@ -692,12 +684,12 @@ video {
   height: 70vh;
 }
 
-.max-h-\[100vh\] {
-  max-height: 100vh;
-}
-
 .max-h-\[90vh\] {
   max-height: 90vh;
+}
+
+.min-h-\[80vh\] {
+  min-height: 80vh;
 }
 
 .min-h-full {
@@ -728,16 +720,20 @@ video {
   width: auto;
 }
 
-.w-calc-fieldset-w {
-  width: calc(800px - 96px);
-}
-
 .w-full {
   width: 100%;
 }
 
+.w-md-calc-fieldset-w {
+  width: calc(100% - 150px);
+}
+
 .w-preform-fieldset-w {
   width: 800px;
+}
+
+.w-sm-calc-fieldset-w {
+  width: calc(100% - 50px);
 }
 
 .max-w-preform-fieldset-w {
@@ -858,6 +854,11 @@ video {
   padding-right: 1rem;
 }
 
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .px-button-x {
   padding-left: 2em;
   padding-right: 2em;
@@ -889,10 +890,6 @@ video {
 
 .pb-6 {
   padding-bottom: 1.5rem;
-}
-
-.pb-\[15px\] {
-  padding-bottom: 15px;
 }
 
 .pt-2 {
@@ -999,18 +996,6 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-@media (min-width: 640px) {
-  .sm\:px-12 {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-
-  .sm\:py-6 {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-}
-
 @media (min-width: 768px) {
   .md\:mt-12 {
     margin-top: 3rem;
@@ -1024,16 +1009,20 @@ video {
     height: 400px;
   }
 
+  .md\:min-h-\[40vh\] {
+    min-height: 40vh;
+  }
+
   .md\:w-\[490px\] {
     width: 490px;
   }
 
-  .md\:w-calc-fieldset-w {
-    width: calc(800px - 96px);
-  }
-
   .md\:w-full {
     width: 100%;
+  }
+
+  .md\:w-md-calc-fieldset-w {
+    width: calc(100% - 150px);
   }
 
   .md\:w-preform-fieldset-w {
@@ -1050,10 +1039,6 @@ video {
 
   .md\:items-end {
     align-items: flex-end;
-  }
-
-  .md\:justify-normal {
-    justify-content: normal;
   }
 
   .md\:gap-0 {

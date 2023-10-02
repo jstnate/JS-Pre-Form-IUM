@@ -31,7 +31,8 @@ module.exports = {
       },
       width: {
         'preform-fieldset-w': '800px',
-        'calc-fieldset-w': 'calc(800px - 96px)',
+        'sm-calc-fieldset-w': 'calc(100% - 50px)',
+        'md-calc-fieldset-w': 'calc(100% - 150px)',
         'auto': 'auto'
       },
       boxShadow: {
