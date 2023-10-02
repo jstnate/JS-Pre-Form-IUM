@@ -720,6 +720,10 @@ video {
   width: 66.666667%;
 }
 
+.w-\[425px\] {
+  width: 425px;
+}
+
 .w-auto {
   width: auto;
 }
@@ -1020,6 +1024,10 @@ video {
     height: 400px;
   }
 
+  .md\:w-\[490px\] {
+    width: 490px;
+  }
+
   .md\:w-calc-fieldset-w {
     width: calc(800px - 96px);
   }
@@ -1058,6 +1066,11 @@ video {
 
   .md\:gap-4 {
     gap: 1rem;
+  }
+
+  .md\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
 
