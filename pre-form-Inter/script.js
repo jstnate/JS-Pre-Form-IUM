@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const buttonSlide = document.getElementById(`next-slide-${id}`);
         const slideElement = document.getElementById(`slide-${id}`);
 
+        slideElement.style.transition = "transform 0.4s ease-in-out";
+
         if (buttonSlide) {
             buttonSlide.onclick = function () {
                 // Récupérer la largeur du slideElement
