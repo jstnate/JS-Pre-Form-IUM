@@ -29,17 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Initialize slides to their starting positions
-    for (let i = 1; i <= 5; i++) {
-        const slideElement = document.getElementById(`slide-${i}`);
-        if(i === 1) {
-            slideElement.style.transform = 'translateX(0)';
-        } else {
-            slideElement.style.transform = `translateX(${preform.offsetWidth}px)`;
-        }
-        setTimeout(() => slideElement.classList.add('transition'), 1500);
-    }
-
     function displayFinalMessage(e) {
         e.preventDefault();
         const userResidence = document.querySelector('input[name="residence"]:checked');
