@@ -17,16 +17,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (buttonSlide) {
             buttonSlide.onclick = function () {
-                // Récupérer la largeur du slideElement
-                const slideWidth = preform.offsetWidth;
-                const newPosition = -(slideWidth * index);  // Calculer la nouvelle position
-                slideElement.style.transform = `translateX(${newPosition}px)`; // Appliquer la nouvelle position
-                index++;
+                if (slideElement.id === 'slide-2' && document.querySelector('input[name="residence"]').value === 'yes') {
+                    const alreadyInFrance = document.getElementById('slide-in-france');
+                    alreadyInFrance.classList.remove('hidden');
+                    alreadyInFrance.classList.remove('flex');
 
-                const newElement = document.getElementById(`slide-${index}`);
-                newElement.style.transform = 'translateX(0)';
+                } else {
+                    // Récupérer la largeur du slideElement
+                    const slideWidth = preform.offsetWidth;
+                    const newPosition = -(slideWidth * index);  // Calculer la nouvelle position
+                    slideElement.style.transform = `translateX(${newPosition}px)`; // Appliquer la nouvelle position
+                    index++;
 
-                slideAction(index)
+                    const newElement = document.getElementById(`slide-${index}`);
+                    newElement.style.transform = 'translateX(0)';
+
+                    slideAction(index)
+                }
+
             };
         }
     }
