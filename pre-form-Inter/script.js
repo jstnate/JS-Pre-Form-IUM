@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
             buttonSlide.onclick = function () {
                 if (slideElement.id === 'slide-2' && document.querySelector('input[id="reside"]').checked) {
                     const alreadyInFrance = document.getElementById('slide-in-france');
+                    preform.classList.remove('flex');
+                    preform.classList.add('hidden');
                     alreadyInFrance.classList.remove('hidden');
                     alreadyInFrance.classList.remove('flex');
 
