@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (buttonSlide) {
             buttonSlide.onclick = function () {
-                if (slideElement.id === 'slide-2' && document.querySelector('input[name="residence"]').value === 'yes') {
+                if (slideElement.id === 'slide-2' && document.querySelector('input[id="reside"]').checked) {
                     const alreadyInFrance = document.getElementById('slide-in-france');
                     alreadyInFrance.classList.remove('hidden');
                     alreadyInFrance.classList.remove('flex');
@@ -81,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'Cette procédure d’admission internationale est à destination d’étudiants étrangers résident hors de France.' : "This international admission procedure is intended for foreign students living outside France.",
         "Si vous êtes déjà en France, je vous invite à candidater directement sur le site des écoles." : "If you are already in France, please apply directly on the schools' websites",
         'Candidater' : 'Candidate',
+        'Continuer' : 'Continue',
         'Candidature nationale' : 'National application',
         'soumettre' : 'Submit',
         "Êtes-vous résident en France ?" : "Are you a resident of France?",
