@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
             isEligibleMessage.classList.remove('hidden');
             isEligibleMessage.classList.add('flex');
             setTimeout(() => {
-                window.open('https://candidater.omneseducation.com/#/international', '_blank');
+                window.open('https://prospect.omneseducation.com/app/international/program', '_blank');
             }, 1000)
         } else {
             isNotEligibleMessage.classList.remove('hidden');
