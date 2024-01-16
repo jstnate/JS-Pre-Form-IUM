@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="TungstenCondensed-Book/style.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="preform-container" class="h-[100vh]">
+      <div
+        id="preform-section"
+        class="w-full flex items-center justify-center h-full"
+      >
+        <form
+          id="preform"
+          class="flex flex-col items-start sm:min-h[70vh] max-h-[90vh] md:h-preform-fieldset-h w-full md:max-w-preform-fieldset-w md:w-preform-fieldset-w px-12 py-6 shadow-fieldset-shadow overflow-hidden relative"
+        >
+          <h5 class="font-tungsten text-h5 to-translate">
+            Questions d'éligibilité
+          </h5>
+          <div id="preform-slider" class="flex items-start gap-12 transition">
+            <fieldset
+              id="slide-1"
+              class="flex flex-col items-start gap-8 md:gap-4 md:w-calc-fieldset-w"
+              style="border: none"
+            >
+              <div class="w-full font-raleway text-p pb-6 pt-2">
+                <p class="to-translate">
+                  Bienvenue à l'Université Internationale de Monaco ! Merci pour
+                  votre intérêt.
+                </p>
+                <p class="to-translate">
+                  Avant de commencer votre demande, nous aimerions vous poser
+                  quelques questions.
+                </p>
+              </div>
+              <a
+                id="next-slide-1"
+                class="font-raleway text-button uppercase font-bold px-button-x py-button-y bg-inseec-red text-white hover:bg-black transition hover:cursor-pointer to-translate"
+                >Continuer</a
+              >
+            </fieldset>
+            <fieldset
+              id="slide-2"
+              class="flex flex-col items-start gap-4 md:gap-2 md:w-calc-fieldset-w"
+              style="border: none"
+            >
+              <h6 class="font-bold font-raleway text-h6 mb-2 to-translate">
+                Quel est votre niveau en anglais ?
+              </h6>
+              <div>
+                <input
+                  type="radio"
+                  name="english-level"
+                  id="no-skills"
+                  value="no-skills"
+                  class="accent-inseec-red hover:cursor-pointer"
+                  checked
+                />
+                <label class="to-translate" for="no-skills"
+                  >Je ne parle pas anglais</label
+                >
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="english-level"
+                  id="beginner"
+                  value="beginner"
+                  class="accent-inseec-red hover:cursor-pointer"
+                />
+                <label class="to-translate" for="beginner"
+                  >Débutant (A1-A2)</label
+                >
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="english-level"
+                  id="intermediate"
+                  value="intermediate"
+                  class="accent-inseec-red hover:cursor-pointer"
+                />
+                <label class="to-translate" for="intermediate"
+                  >Intermédiaire (B1-B2)</label
+                >
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="english-level"
+                  id="advance"
+                  value="advance"
+                  class="accent-inseec-red hover:cursor-pointer"
+                />
+                <label class="to-translate" for="advance">Avancé (C1)</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="english-level"
+                  id="native"
+                  value="native"
+                  class="accent-inseec-red hover:cursor-pointer"
+                />
+                <label class="to-translate" for="native">Natif (C2)</label>
+              </div>
+              <div
+                class="flex flex-col md:flex-row items-start md:items-end gap-4 mt-6 md:mt-0 md:gap-0 md:w-full justify-between"
+              >
+                <div
+                  class="w-full flex items-center justify-between md:justify-normal md:gap-4"
+                >
+                  <hr class="h-3 w-12 bg-inseec-red" />
+                  <hr class="h-3 w-12 bg-gray-200" />
+                </div>
+                <a
+                  id="next-slide-2"
+                  class="font-raleway text-button uppercase font-bold px-button-x py-button-y bg-inseec-red text-white hover:text-white hover:bg-black transition hover:cursor-pointer to-translate"
+                  >Suivant</a
+                >
+              </div>
+            </fieldset>
+            <fieldset
+              id="slide-3"
+              class="flex flex-col items-start gap-4 md:gap-2 md:w-calc-fieldset-w"
+              style="border: none"
+            >
+              <h6 class="font-bold font-raleway text-h6">
+                Êtes-vous conscient des étapes pour postuler ?
+              </h6>
+              <p
+                class="w-full font-raleway font-normal text-p pb-2 flex md:items-center items-start flex-col md:flex-row"
+              >
+                <span
+                  class="w-full md:w-auto font-raleway font-normal text-p flex md:flex-row flex-col md:items-center md:justify-between justify-normal md:my-2"
+                >
+                  <span>
+                    <strong class="mr-1 to-translate">Étape 1 :</strong>
+                    <span class="to-translate"
+                      >Remplissez le formulaire de candidature et téléchargez
+                      vos documents</span
+                    >
+                  </span>
+                  <span
+                    class="flex bg-inseec-red rounded-full w-[5px] md:w-[8px] h-[5px] my-4 md:my-0 md:mr-6 md:ml-4"
+                  ></span>
+                  <span>
+                    <strong class="mr-1 to-translate">Étape 2 :</strong>
+                    <span class="to-translate"
+                      >Payer les frais de candidature de </span
+                    ><span class="text-inseec-red to-translate"
+                      >70 à 80 euros</span
+                    >
+                  </span>
+                  <span
+                    class="flex bg-inseec-red rounded-full w-[5px] md:w-[8px] h-[5px] my-4 md:my-0 md:mr-6 md:ml-4"
+                  ></span>
+                  <span>
+                    <strong class="mr-1 to-translate">Étape 3 :</strong>
+                    <span class="to-translate"
+                      >L'équipe d'admissions vous informera de votre
+                      éligibilité.</span
+                    >
+                  </span>
+                </span>
+              </p>
+              <div
+                class="flex flex-col md:flex-row items-start md:items-end gap-4 md:gap-0 md:w-full justify-between mt-2"
+              >
+                <div
+                  class="w-full flex items-center justify-between md:justify-normal md:gap-4"
+                >
+                  <hr class="h-3 w-12 bg-black" />
+                  <hr class="h-3 w-12 bg-inseec-red" />
+                </div>
+                <button
+                  type="submit"
+                  id="next-slide-3"
+                  style="border-radius: 0; border: none"
+                  class="font-raleway text-button uppercase font-bold px-button-x py-button-y bg-inseec-red text-white hover:bg-black transition hover:cursor-pointer to-translate"
+                >
+                  Soumettre
+                </button>
+              </div>
+            </fieldset>
+          </div>
+        </form>
+        <div
+          id="slide-not-eligible"
+          class="hidden flex-col items-start gap-6 min-h-preform-fieldset-h max-w-preform-fieldset-w lg:w-preform-fieldset-w px-12 py-8 shadow-fieldset-shadow"
+        >
+          <h6 class="font-bold font-raleway text-h6 to-translate">
+            Merci pour votre intérêt dans notre université.
+          </h6>
+          <div
+            class="font-raleway font-normal text-p flex items-start gap-2 flex-col"
+          >
+            <p class="to-translate">
+              D'après les réponses que vous avez fournies, il semble que vous
+              n'êtes pas éligible pour ce programme.
+            </p>
+            <p class="to-translate">
+              Cependant, nous serions ravis de vous guider et de vous informer
+              sur un autre programme qui correspond à votre profil.
+            </p>
+          </div>
+          <p
+            class="font-raleway font-normal pb-2 text-p to-translate"
+            style="width: 89%"
+          >
+            <span class="to-translate"
+              >Si vous avez des doutes, veuillez contacter l'équipe d'admissions
+              à l'adresse suivante : </span
+            ><a
+              href="mailto:admissions@monaco.edu"
+              class="ml-1 font-raleway font-normal text-p underline text-inseec-red hover:text-black transition"
+              >admissions@monaco.edu</a
+            >
+            <span class="to-translate">ou au </span> +377 97 98 69 96
+          </p>
+          <a
+            href="https://www.monaco.edu/"
+            target="_parent"
+            id="close-preform"
+            class="font-raleway text-button uppercase font-bold px-button-x py-button-y bg-inseec-red text-white hover:bg-black transition to-translate"
+            >Fermer</a
+          >
+        </div>
+
+        <div
+          id="slide-eligible"
+          class="hidden flex-col items-start gap-4 md:w-preform-fieldset-w px-12 py-16 shadow-fieldset-shadow"
+        >
+          <h6 class="font-bold font-raleway text-h6">
+            Vous êtes éligible à la candidature.
+          </h6>
+          <div class="font-raleway font-normal text-p">
+            <p>
+              Vous serez redirigé vers le formulaire de candidature dans
+              quelques secondes.
+            </p>
+            <p>Si ce n'est pas le cas, cliquez sur le lien ci-dessous :</p>
+          </div>
+          <a
+            href="https://prospect.omneseducation.com/app/ium/program"
+            target="_parent"
+            class="font-raleway font-normal text-p underline text-inseec-red hover:text-black transition hover:cursor-pointer"
+            >Lien vers le formulaire de candidature</a
+          >
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
