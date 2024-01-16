@@ -644,6 +644,10 @@ video {
   margin-top: 2rem;
 }
 
+.mt-\[3rem\] {
+  margin-top: 3rem;
+}
+
 .block {
   display: block;
 }

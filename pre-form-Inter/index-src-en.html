@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="InseecU-Font-Medium/stylesheet.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="preform-container" class="h-[100vh]">
+      <div
+        id="preform-section"
+        class="w-full flex items-center justify-center h-full"
+      >
+        <form
+          id="preform"
+          class="flex flex-col items-start min-h-[80vh] md:min-h-[40vh] max-h-[90vh] md:h-preform-fieldset-h w-full md:max-w-preform-fieldset-w md:w-preform-fieldset-w px-6 md:px-12 py-6 shadow-fieldset-shadow overflow-hidden relative"
+        >
+          <h5 class="font-inseecu text-h5 mb-6">International Admission</h5>
+          <div
+            id="preform-slider"
+            class="flex items-start gap-12 transition w-[425px] md:w-[490px]"
+          >
+            <fieldset
+              id="slide-1"
+              class="absolute flex flex-col items-start gap-8 md:gap-4 w-sm-calc-fieldset-w md:w-md-calc-fieldset-w"
+              style="
+                border: none;
+                transform: translateX(0);
+                transition: translate 0.4s;
+              "
+            >
+              <h6 class="w-full font-inter pt-2 font-bold text-h6">
+                Let's check together if our programs match you.
+              </h6>
+              <div class="w-full font-inter text-p pb-6">
+                <p>
+                  This international admission procedure is intended for foreign
+                  students living outside France.
+                </p>
+              </div>
+              <div class="flex flex-col items-start md:flex-row gap-6">
+                <a
+                  id="next-slide-1"
+                  class="font-inter text-button uppercase font-bold px-button-x py-button-y bg-inseec-purple text-white hover:bg-black transition hover:cursor-pointer rounded-button"
+                  >Apply</a
+                >
+              </div>
+            </fieldset>
+            <fieldset
+              id="slide-2"
+              class="absolute flex flex-col items-start gap-4 md:gap-2 w-sm-calc-fieldset-w md:w-md-calc-fieldset-w h-full"
+              style="
+                border: none;
+                transform: translateX(calc(100% + 125px));
+                transition: translate 0.4s;
+              "
+            >
+              <h6 class="font-bold font-inter text-h6 mb-2 mt-4">
+                Are you resident in France?
+              </h6>
+              <div>
+                <input
+                  type="radio"
+                  name="residence"
+                  id="ne-reside-pas"
+                  value="no"
+                  class="accent-inseec-purple hover:cursor-pointer"
+                  checked
+                />
+                <label for="ne-reside-pas"
+                  >I am an international student living outside France</label
+                >
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="residence"
+                  id="reside"
+                  value="yes"
+                  class="accent-inseec-purple hover:cursor-pointer"
+                />
+                <label for="reside"
+                  >I am an international student living in France</label
+                >
+              </div>
+              <div
+                class="flex flex-col md:flex-row items-start md:items-end gap-4 mt-28 md:mt-20 md:gap-0 w-4/6 md:w-full justify-between"
+              >
+                <div class="w-full flex items-center justify-normal gap-4">
+                  <hr class="h-3 w-12 bg-inseec-purple" />
+                  <hr class="h-3 w-12 bg-gray-200" />
+                  <hr class="h-3 w-12 bg-gray-200" />
+                  <hr class="h-3 w-12 bg-gray-200" />
+                </div>
+                <a
+                  id="next-slide-2"
+                  class="font-inter text-button uppercase font-bold px-button-x py-button-y bg-inseec-purple text-white hover:text-white hover:bg-black transition hover:cursor-pointer rounded-button"
+                  >Continue</a
+                >
+              </div>
+            </fieldset>
+            <fieldset
+              id="slide-3"
+              class="absolute flex flex-col items-start gap-4 md:gap-2 w-sm-calc-fieldset-w md:w-md-calc-fieldset-w h-full"
+              style="
+                border: none;
+                transform: translateX(calc(100% + 125px));
+                transition: translate 0.4s;
+              "
+            >
+              <h6 class="font-bold font-inter text-h6 mb-2 mt-4">
+                What is your annual study budget?
+              </h6>
+              <div>
+                <input
+                  type="radio"
+                  name="budget"
+                  id="small"
+                  value="small"
+                  class="accent-inseec-purple hover:cursor-pointer"
+                  checked
+                />
+                <label for="small"> Less than 7,000 euros per year </label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="budget"
+                  id="medium"
+                  value="medium"
+                  class="accent-inseec-purple hover:cursor-pointer"
+                />
+                <label for="medium">
+                  Between 7,000 and 12,000 euros per year
+                </label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="budget"
+                  id="large"
+                  value="large"
+                  class="accent-inseec-purple hover:cursor-pointer"
+                />
+                <label for="large"> More than 12,000 euros per year </label>
+              </div>
+              <div
+                class="flex flex-col md:flex-row items-start md:items-end gap-4 mt-12 md:gap-0 w-4/6 md:w-full justify-between"
+              >
+                <div class="w-full flex items-center justify-normal gap-4">
+                  <hr class="h-3 w-12 bg-black" />
+                  <hr class="h-3 w-12 bg-inseec-purple" />
+                  <hr class="h-3 w-12 bg-gray-200" />
+                  <hr class="h-3 w-12 bg-gray-200" />
+                </div>
+                <a
+                  id="next-slide-3"
+                  class="font-inter text-button uppercase font-bold px-button-x py-button-y bg-inseec-purple text-white hover:text-white hover:bg-black transition hover:cursor-pointer rounded-button"
+                  >Continue</a
+                >
+              </div>
+            </fieldset>
+            <fieldset
+              id="slide-4"
+              class="absolute flex flex-col items-start gap-4 md:gap-2 w-sm-calc-fieldset-w md:w-md-calc-fieldset-w h-full"
+              style="
+                border: none;
+                transform: translateX(calc(100% + 125px));
+                transition: translate 0.4s;
+              "
+            >
+              <h6 class="font-bold font-inter text-h6 mt-6 to-translate">
+                Dans quelle langue souhaitez-vous réaliser vos études ?
+              </h6>
+              <div>
+                <input
+                  type="radio"
+                  name="language"
+                  id="french"
+                  value="french"
+                  class="accent-inseec-purple hover:cursor-pointer"
+                  checked
+                />
+                <label class="to-translate" for="french">Français</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="language"
+                  id="english"
+                  value="english"
+                  class="accent-inseec-purple hover:cursor-pointer"
+                />
+                <label class="to-translate" for="english">Anglais</label>
+              </div>
+              <div
+                class="flex flex-col md:flex-row items-start md:items-end gap-4 mt-20 md:gap-0 w-4/6 md:w-full justify-between"
+              >
+                <div class="w-full flex items-center justify-normal gap-4">
+                  <hr class="h-3 w-12 bg-black" />
+                  <hr class="h-3 w-12 bg-black" />
+                  <hr class="h-3 w-12 bg-inseec-purple" />
+                  <hr class="h-3 w-12 bg-gray-200" />
+                </div>
+                <a
+                  id="next-slide-4"
+                  class="font-inter text-button uppercase font-bold px-button-x py-button-y bg-inseec-purple text-white hover:text-white hover:bg-black transition hover:cursor-pointer rounded-button to-translate"
+                  >Continuer</a
+                >
+              </div>
+            </fieldset>
+            <fieldset
+              id="slide-5"
+              class="absolute flex flex-col items-start gap-4 md:gap-2 w-sm-calc-fieldset-w md:w-md-calc-fieldset-w"
+              style="
+                border: none;
+                transform: translateX(calc(100% + 125px));
+                transition: translate 0.4s;
+              "
+            >
+              <h6 class="font-bold font-inter text-h6 to-translate">
+                Quel est votre niveau dans la langue d'enseignement ?
+              </h6>
+              <div>
+                <input
+                  type="radio"
+                  name="speaking-level"
+                  id="beginner"
+                  value="beginner"
+                  class="accent-inseec-purple hover:cursor-pointer"
+                  checked
+                />
+                <label class="to-translate" for="beginner"
+                  >Débutant (A1-A2)</label
+                >
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="speaking-level"
+                  id="intermediate"
+                  value="intermediate"
+                  class="accent-inseec-purple hover:cursor-pointer"
+                />
+                <label class="to-translate" for="intermediate"
+                  >Intermédiaire (B1-B2)</label
+                >
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="speaking-level"
+                  id="confirmed"
+                  value="confirmed"
+                  class="accent-inseec-purple hover:cursor-pointer"
+                />
+                <label class="to-translate" for="confirmed"
+                  >Confirmé (C1-C2)</label
+                >
+              </div>
+              <div
+                class="flex flex-col md:flex-row items-start md:items-end gap-4 md:gap-0 w-4/6 mt-20 md:w-full justify-between mt-8 md:mt-20"
+              >
+                <div class="w-full flex items-center justify-normal gap-4">
+                  <hr class="h-3 w-12 bg-black" />
+                  <hr class="h-3 w-12 bg-black" />
+                  <hr class="h-3 w-12 bg-black" />
+                  <hr class="h-3 w-12 bg-inseec-purple" />
+                </div>
+                <button
+                  type="submit"
+                  id="next-slide-5"
+                  style="border: none"
+                  class="font-inter text-button uppercase font-bold px-button-x py-button-y bg-inseec-purple text-white hover:text-white hover:bg-black transition hover:cursor-pointer rounded-button to-translate"
+                >
+                  soumettre
+                </button>
+              </div>
+            </fieldset>
+          </div>
+        </form>
+        <div
+          id="slide-not-eligible"
+          class="hidden flex-col items-start gap-6 min-h-preform-fieldset-h max-w-preform-fieldset-w lg:w-preform-fieldset-w px-12 py-8 shadow-fieldset-shadow"
+        >
+          <h6 class="font-bold font-inter text-h6 to-translate">
+            Thank you for your interest in our programs.
+          </h6>
+          <div
+            class="font-inter font-normal text-p flex flex-col items-start gap-2 to-translate"
+          >
+            <p class="to-translate">
+              Please note, in order to apply, we require a minimum intermediate
+              level (B2) in the language of instruction.
+            </p>
+            <p class="to-translate">
+              Also, our programs start from 7,000 € per year.
+            </p>
+          </div>
+          <div
+            class="font-inter font-normal pb-2 text-p flex flex-col items-start mb-6"
+          >
+            <p class="to-translate">Do not hesitate to contact us if needed:</p>
+            <a
+              href="mailto:internationaladmissions@omneseducation.com"
+              class="my-2 font-inter font-normal text-p underline text-inseec-purple hover:text-black transition"
+              >internationaladmissions@omneseducation.com</a
+            >
+            <a
+              class="font-inter font-normal text-p underline text-inseec-purple hover:text-black transition"
+              >+33 01 53 38 84 30</a
+            >
+          </div>
+          <div
+            class="font-inter font-normal text-p flex flex-col items-start gap-2"
+          >
+            <p class="to-translate">The International Admissions Team</p>
+            <p>Omnes Education</p>
+          </div>
+          <a
+            href="https://www.omneseducation.com/"
+            target="_parent"
+            id="close-preform"
+            class="font-inter text-button uppercase font-bold px-button-x py-button-y bg-inseec-purple text-white hover:bg-black transition rounded-button to-translate"
+            >Close</a
+          >
+        </div>
+
+        <div
+          id="slide-eligible"
+          class="hidden flex-col items-start gap-4 md:w-preform-fieldset-w px-12 py-16 shadow-fieldset-shadow"
+        >
+          <h6 class="font-bold font-inter text-h6 to-translate">
+            You are eligible to apply.
+          </h6>
+          <p class="font-inter font-normal text-p to-translate">
+            You will be redirected to the application form in a few seconds. If
+            not, please click on the link below:
+          </p>
+          <a
+            href="https://prospect.omneseducation.com/app/international/program"
+            target="_parent"
+            class="font-inter font-normal text-p underline text-inseec-purple hover:text-black transition hover:cursor-pointer to-translate"
+            >Link to the application form</a
+          >
+        </div>
+
+        <div
+          id="slide-in-france"
+          class="hidden flex-col items-start gap-4 md:w-preform-fieldset-w px-12 py-16 shadow-fieldset-shadow"
+        >
+          <h6 class="font-bold font-inter text-h6 to-translate">
+            You are eligible to apply.
+          </h6>
+          <p class="font-inter font-normal text-p py-4 to-translate">
+            If you are already in France, we invite you to apply directly on the
+            schools' websites
+          </p>
+          <ul>
+            <li>
+              <span>ESCE: </span>
+              <a
+                href="https://www.esce.fr/admissions/"
+                class="text-inseec-purple"
+                >https://www.esce.fr/admissions/</a
+              >
+            </li>
+            <li>
+              <span>SDP: </span>
+              <a
+                href="https://www.supdepub.com/concours-admissions/"
+                class="text-inseec-purple"
+                >https://www.supdepub.com/concours-admissions/</a
+              >
+            </li>
+            <li>
+              <span>HEIP: </span>
+              <a
+                href="https://prospect.omneseducation.com/app/heip/program"
+                class="text-inseec-purple"
+                >https://prospect.omneseducation.com/app/heip/program</a
+              >
+            </li>
+            <li>
+              <span>INSEEC: </span>
+              <a
+                href="https://www.inseec.com/procedures-admissions/"
+                class="text-inseec-purple"
+                >https://www.inseec.com/procedures-admissions/</a
+              >
+            </li>
+            <li>
+              <span>ECE: </span>
+              <a
+                href="https://www.ece.fr/candidatez-a-lun-des-3-programmes-de-lece/"
+                class="text-inseec-purple"
+                >https://www.ece.fr/candidatez-a-lun-des-3-programmes-de-lece/</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
