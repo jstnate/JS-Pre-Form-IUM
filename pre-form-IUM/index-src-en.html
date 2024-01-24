@@ -1,115 +1,271 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="TungstenCondensed-Book/style.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="TungstenCondensed-Book/style.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="script.js" defer></script>
     <title>Document</title>
-</head>
-<body>
-<section id="preform-container" class="h-[100vh]">
-    <div id="preform-section" class="w-full flex items-center justify-center h-full">
-        <form id="preform" class="flex flex-col items-start sm:min-h[70vh] max-h-[90vh] md:h-preform-fieldset-h w-full md:max-w-preform-fieldset-w md:w-preform-fieldset-w px-12 py-6 shadow-fieldset-shadow overflow-hidden relative">
-            <h5 class="font-tungsten text-h5 to-translate">Eligibility Questions</h5>
-            <div id="preform-slider" class="flex items-start gap-12 transition">
-                <fieldset id="slide-1" class="flex flex-col items-start gap-8 md:gap-4 md:w-calc-fieldset-w" style="border: none;">
-                    <div class="w-full font-raleway text-p pb-6 pt-2">
-                        <p class="to-translate">Welcome to the International University of Monaco! Thank you for your interest.</p>
-                        <p class="to-translate">Before you start your application, we'd like to ask you a few questions.</p>
-                    </div>
-                    <a id="next-slide-1" class="font-raleway text-button uppercase font-bold px-button-x py-button-y bg-inseec-red text-white hover:bg-black transition hover:cursor-pointer to-translate">Continue</a>
-                </fieldset>
-                <fieldset id="slide-2" class="flex flex-col items-start gap-4 md:gap-2 md:w-calc-fieldset-w" style="border: none;">
-                    <h6 class="font-bold font-raleway text-h6 mb-2 to-translate">
-                        What's your level of English?
-                    </h6>
-                    <div>
-                        <input type="radio" name="english-level" id="no-skills" value="no-skills"  class="accent-inseec-red hover:cursor-pointer" checked>
-                        <label class="to-translate" for="no-skills">I don't speak english</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="english-level" id="beginner" value="beginner" class="accent-inseec-red hover:cursor-pointer">
-                        <label class="to-translate" for="beginner">Beginner (A1-A2)</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="english-level" id="intermediate" value="intermediate" class="accent-inseec-red hover:cursor-pointer">
-                        <label class="to-translate" for="intermediate">Intermediate (B1-B2)</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="english-level" id="advance" value="advance" class="accent-inseec-red hover:cursor-pointer">
-                        <label class="to-translate" for="advance">Advanced (C1)</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="english-level" id="native" value="native" class="accent-inseec-red hover:cursor-pointer">
-                        <label class="to-translate" for="native">Native (C2)</label>
-                    </div>
-                    <div class="flex flex-col md:flex-row items-start md:items-end gap-4 mt-6 md:mt-0 md:gap-0 md:w-full justify-between ">
-                        <div class="w-full flex items-center justify-between md:justify-normal md:gap-4">
-                            <hr class="h-3 w-12 bg-inseec-red">
-                            <hr class="h-3 w-12 bg-gray-200">
-                        </div>
-                        <a id="next-slide-2" class="font-raleway text-button uppercase font-bold px-button-x py-button-y bg-inseec-red text-white hover:text-white hover:bg-black transition hover:cursor-pointer to-translate">Next</a>
-                    </div>
-                </fieldset>
-                <fieldset id="slide-3" class="flex flex-col items-start gap-4 md:gap-2 md:w-calc-fieldset-w" style="border: none;">
-                    <h6 class="font-bold font-raleway text-h6">
-                        Are you aware about the steps to apply ?
-                    </h6>
-                    <p class="w-full font-raleway font-normal text-p pb-2 flex md:items-center items-start flex-col md:flex-row">
-                            <span class="w-full md:w-auto font-raleway font-normal text-p flex md:flex-row flex-col md:items-center md:justify-between justify-normal md:my-2">
-                                <span>
-                                    <strong class="mr-1 to-translate">Step 1 :</strong>
-                                    <span class="to-translate">Fill in the application form and upload your documents</span>
-                                </span>
-                                <span class="flex bg-inseec-red rounded-full w-[5px] md:w-[8px] h-[5px] my-4 md:my-0 md:mr-6 md:ml-4"></span>
-                                <span>
-                                    <strong class="mr-1 to-translate">Step 2 :</strong>
-                                    <span class="to-translate">Pay the application fee from  </span><span class="text-inseec-red to-translate">70 to 80 euros</span>
-                                </span>
-                                <span class="flex bg-inseec-red rounded-full w-[5px] md:w-[8px] h-[5px] my-4 md:my-0 md:mr-6 md:ml-4"></span>
-                                <span>
-                                    <strong class="mr-1 to-translate">Step 3 :</strong>
-                                    <span class="to-translate">The admissions team will let you know about your eligibility.</span>
-                                </span>
-                            </span>
-                    </p>
-                    <div class="flex flex-col md:flex-row items-start md:items-end gap-4 md:gap-0 md:w-full justify-between mt-2">
-                        <div class="w-full flex items-center justify-between md:justify-normal md:gap-4">
-                            <hr class="h-3 w-12 bg-black">
-                            <hr class="h-3 w-12 bg-inseec-red">
-                        </div>
-                        <button type="submit" id="next-slide-3" style="border-radius: 0; border: none;" class="font-raleway text-button uppercase font-bold px-button-x py-button-y bg-inseec-red text-white hover:bg-black transition hover:cursor-pointer to-translate">Submit</button>
-                    </div>
-                </fieldset>
-            </div>
+  </head>
+  <body>
+    <section id="preform-container" class="h-[100vh]">
+      <div
+        id="preform-section"
+        class="w-full flex items-center justify-center h-full"
+      >
+        <form
+          id="preform"
+          class="flex flex-col items-start sm:min-h[70vh] max-h-[90vh] md:h-preform-fieldset-h w-full md:max-w-preform-fieldset-w md:w-preform-fieldset-w px-12 py-6 shadow-fieldset-shadow overflow-hidden relative"
+        >
+          <h5 class="font-tungsten text-h5 to-translate">
+            Eligibility Questions
+          </h5>
+          <div id="preform-slider" class="flex items-start gap-12 transition">
+            <fieldset
+              id="slide-1"
+              class="flex flex-col items-start gap-8 md:gap-4 md:w-calc-fieldset-w"
+              style="border: none"
+            >
+              <div class="w-full font-raleway text-p pb-6 pt-2">
+                <p class="to-translate">
+                  Welcome to the International University of Monaco! Thank you
+                  for your interest.
+                </p>
+                <p class="to-translate">
+                  Before you start your application, we'd like to ask you a few
+                  questions.
+                </p>
+              </div>
+              <a
+                id="next-slide-1"
+                class="font-raleway text-button uppercase font-bold px-button-x py-button-y bg-inseec-red text-white hover:bg-black transition hover:cursor-pointer to-translate"
+                >Continue</a
+              >
+            </fieldset>
+            <fieldset
+              id="slide-2"
+              class="flex flex-col items-start gap-4 md:gap-2 md:w-calc-fieldset-w"
+              style="border: none"
+            >
+              <h6 class="font-bold font-raleway text-h6 mb-2 to-translate">
+                What's your level of English?
+              </h6>
+              <div>
+                <input
+                  type="radio"
+                  name="english-level"
+                  id="no-skills"
+                  value="no-skills"
+                  class="accent-inseec-red hover:cursor-pointer"
+                  checked
+                />
+                <label class="to-translate" for="no-skills"
+                  >I don't speak english</label
+                >
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="english-level"
+                  id="beginner"
+                  value="beginner"
+                  class="accent-inseec-red hover:cursor-pointer"
+                />
+                <label class="to-translate" for="beginner"
+                  >Beginner (A1-A2)</label
+                >
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="english-level"
+                  id="intermediate"
+                  value="intermediate"
+                  class="accent-inseec-red hover:cursor-pointer"
+                />
+                <label class="to-translate" for="intermediate"
+                  >Intermediate (B1-B2)</label
+                >
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="english-level"
+                  id="advance"
+                  value="advance"
+                  class="accent-inseec-red hover:cursor-pointer"
+                />
+                <label class="to-translate" for="advance">Advanced (C1)</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="english-level"
+                  id="native"
+                  value="native"
+                  class="accent-inseec-red hover:cursor-pointer"
+                />
+                <label class="to-translate" for="native">Native (C2)</label>
+              </div>
+              <div
+                class="flex flex-col md:flex-row items-start md:items-end gap-4 mt-6 md:mt-0 md:gap-0 md:w-full justify-between"
+              >
+                <div
+                  class="w-full flex items-center justify-between md:justify-normal md:gap-4"
+                >
+                  <hr class="h-3 w-12 bg-inseec-red" />
+                  <hr class="h-3 w-12 bg-gray-200" />
+                </div>
+                <a
+                  id="next-slide-2"
+                  class="font-raleway text-button uppercase font-bold px-button-x py-button-y bg-inseec-red text-white hover:text-white hover:bg-black transition hover:cursor-pointer to-translate"
+                  >Next</a
+                >
+              </div>
+            </fieldset>
+            <fieldset
+              id="slide-3"
+              class="flex flex-col items-start gap-4 md:gap-2 md:w-calc-fieldset-w"
+              style="border: none"
+            >
+              <h6 class="font-bold font-raleway text-h6">
+                Are you aware about the steps to apply ?
+              </h6>
+              <p
+                class="w-full font-raleway font-normal text-p pb-2 flex md:items-center items-start flex-col md:flex-row"
+              >
+                <span
+                  class="w-full md:w-auto font-raleway font-normal text-p flex md:flex-row flex-col md:items-center md:justify-between justify-normal md:my-2"
+                >
+                  <span>
+                    <strong class="mr-1 to-translate">Step 1 :</strong>
+                    <span class="to-translate"
+                      >Fill in the application form and upload your
+                      documents</span
+                    >
+                  </span>
+                  <span
+                    class="flex bg-inseec-red rounded-full w-[5px] md:w-[8px] h-[5px] my-4 md:my-0 md:mr-6 md:ml-4"
+                  ></span>
+                  <span>
+                    <strong class="mr-1 to-translate">Step 2 :</strong>
+                    <span class="to-translate"
+                      >Pay the application fee from </span
+                    ><span class="text-inseec-red to-translate"
+                      >70 to 80 euros</span
+                    >
+                  </span>
+                  <span
+                    class="flex bg-inseec-red rounded-full w-[5px] md:w-[8px] h-[5px] my-4 md:my-0 md:mr-6 md:ml-4"
+                  ></span>
+                  <span>
+                    <strong class="mr-1 to-translate">Step 3 :</strong>
+                    <span class="to-translate"
+                      >The admissions team will let you know about your
+                      eligibility.</span
+                    >
+                  </span>
+                </span>
+              </p>
+              <div
+                class="flex flex-col md:flex-row items-start md:items-end gap-4 md:gap-0 md:w-full justify-between mt-2"
+              >
+                <div
+                  class="w-full flex items-center justify-between md:justify-normal md:gap-4"
+                >
+                  <hr class="h-3 w-12 bg-black" />
+                  <hr class="h-3 w-12 bg-inseec-red" />
+                </div>
+                <button
+                  type="submit"
+                  id="next-slide-3"
+                  style="border-radius: 0; border: none"
+                  class="font-raleway text-button uppercase font-bold px-button-x py-button-y bg-inseec-red text-white hover:bg-black transition hover:cursor-pointer to-translate"
+                >
+                  Submit
+                </button>
+              </div>
+            </fieldset>
+          </div>
         </form>
-        <div id="slide-not-eligible" class="hidden flex-col items-start gap-6 min-h-preform-fieldset-h max-w-preform-fieldset-w lg:w-preform-fieldset-w px-12 py-8 shadow-fieldset-shadow">
-            <h6 class="font-bold font-raleway text-h6 to-translate">Thank you for your interest in our university.</h6>
-            <div class="font-raleway font-normal text-p flex items-start gap-2 flex-col">
-                <p class="to-translate">From the answers you've given, it seems that you're not eligible for this program.</p>
-                <p class="to-translate">However, we'd be delighted to guide you and tell you about another program that suits your profile.</p>
-            </div>
-            <p class="font-raleway font-normal pb-2 text-p to-translate"  style="width: 89%;"><span class="to-translate">If in doubt, please contact the admissions team at the following address : </span><a href="mailto:admissions@monaco.edu" class="ml-1 font-raleway font-normal text-p underline text-inseec-red hover:text-black transition">admissions@monaco.edu</a> <span class="to-translate">or at </span> +377 97 98 69 96</p>
-            <a href="https://www.monaco.edu/" target="_parent" id="close-preform" class="font-raleway text-button uppercase font-bold px-button-x py-button-y bg-inseec-red text-white hover:bg-black transition to-translate">Close</a>
+        <div
+          id="slide-not-eligible"
+          class="hidden flex-col items-start gap-6 min-h-preform-fieldset-h max-w-preform-fieldset-w lg:w-preform-fieldset-w px-12 py-8 shadow-fieldset-shadow"
+        >
+          <h6 class="font-bold font-raleway text-h6 to-translate">
+            Thank you for your interest in our university.
+          </h6>
+          <div
+            class="font-raleway font-normal text-p flex items-start gap-2 flex-col"
+          >
+            <p class="to-translate">
+              From the answers you've given, it seems that you're not eligible
+              for this program.
+            </p>
+            <p class="to-translate">
+              However, we'd be delighted to guide you and tell you about another
+              program that suits your profile.
+            </p>
+          </div>
+          <p
+            class="font-raleway font-normal pb-2 text-p to-translate"
+            style="width: 89%"
+          >
+            <span class="to-translate"
+              >If in doubt, please contact the admissions team at the following
+              address : </span
+            ><a
+              href="mailto:admissions@monaco.edu"
+              class="ml-1 font-raleway font-normal text-p underline text-inseec-red hover:text-black transition"
+              >admissions@monaco.edu</a
+            >
+            <span class="to-translate">or at </span> +377 97 98 69 96
+          </p>
+          <a
+            href="https://www.monaco.edu/"
+            target="_parent"
+            id="close-preform"
+            class="font-raleway text-button uppercase font-bold px-button-x py-button-y bg-inseec-red text-white hover:bg-black transition to-translate"
+            >Close</a
+          >
         </div>
 
-        <div id="slide-eligible" class="hidden flex-col items-start gap-4 md:w-preform-fieldset-w px-12 py-16 shadow-fieldset-shadow">
-            <h6 class="font-bold font-raleway text-h6 to-translate">You are eligible to apply.</h6>
-            <div class="font-raleway font-normal text-p">
-                <p class="to-translate">You'll be redirected to the application form in a few seconds.</p>
-                <p class="to-translate">If not, click on the link below:</p>
-            </div>
-            <a href="https://prospect.omneseducation.com/app/ium/program" target="_parent" class="font-raleway font-normal text-p underline text-inseec-red hover:text-black transition hover:cursor-pointer to-translate">Link to application form</a>
+        <div
+          id="slide-eligible"
+          class="hidden flex-col items-start gap-4 md:w-preform-fieldset-w px-12 py-16 shadow-fieldset-shadow"
+        >
+          <h6 class="font-bold font-raleway text-h6 to-translate">
+            You are eligible to apply.
+          </h6>
+          <div class="font-raleway font-normal text-p">
+            <p class="to-translate">
+              You'll be redirected to the application form in a few seconds.
+            </p>
+            <p class="to-translate">If not, click on the link below:</p>
+          </div>
+          <a
+            href="https://prospect.omneseducation.com/app/ium/program"
+            target="_parent"
+            class="font-raleway font-normal text-p underline text-inseec-red hover:text-black transition hover:cursor-pointer to-translate"
+            >Link to application form</a
+          >
         </div>
-    </div>
-</section>
-
-</body>
+      </div>
+    </section>
+  </body>
 </html>
