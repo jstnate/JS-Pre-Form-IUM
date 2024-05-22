@@ -265,6 +265,55 @@ document.addEventListener('DOMContentLoaded', function() {
         preform.onsubmit = displayFinalMessage;
     };
 
+    function addParamsToUrl() {
+        console.log('working');
+        // Récupérer l'URL de la page en cours
+        var currentPageUrl = window.location.href;
+        // Récupérer les paramètres de l'URL
+        var urlParams = new URLSearchParams(currentPageUrl.split('?')[1]);
+
+        // Récupérer tous les boutons avec la classe "candidature"
+        var buttons = document.querySelectorAll("#slide-eligible a, #slide-in-france a");
+
+        // Pour chaque bouton
+        buttons.forEach(function(button) {
+            // Vérifier si l'attribut "href" existe
+            if (!button.hasAttribute("href")) {
+                console.error("Le bouton avec la classe 'candidature' doit avoir un attribut 'href'");
+                return; // Si l'attribut "href" est absent, sortir de la boucle
+            }
+
+            // Bloquer le lien d'origine du bouton
+            button.addEventListener("click", function(event) {
+                event.preventDefault();
+            });
+
+            // Récupérer l'URL présente sur le bouton
+            var buttonUrl = button.getAttribute("href");
+            // Vérifier si l'attribut "target" existe
+            var isBlank = button.hasAttribute("target") && button.getAttribute("target") === "_blank";
+            // Vérifier si l'URL contient déjà des paramètres
+            var hasParams = buttonUrl.includes("?");
+            // Ajouter le point d'interrogation s'il n'existe pas déjà
+            buttonUrl += hasParams ? "&" : "?";
+            // Créer une copie des paramètres pour chaque bouton
+            var buttonUrlParams = new URLSearchParams(urlParams);
+            // Ajouter les paramètres à l'URL présente sur le bouton
+            buttonUrlParams.forEach(function(value, key) {
+                buttonUrl += encodeURIComponent(key) + "=" + encodeURIComponent(value) + "&";
+            });
+            // Supprimer le dernier "&"
+            buttonUrl = buttonUrl.slice(0, -1);
+                console.log("button url="+buttonUrl);
+            // Ajouter l'attribut target="_blank" si nécessaire
+            var onclickValue = isBlank ? "window.open('" + buttonUrl + "', '_blank')" : "location.href='" + buttonUrl + "'";
+            // Définir l'attribut "onclick" du bouton avec la nouvelle URL et l'attribut target si nécessaire
+            button.setAttribute("onclick", onclickValue);
+        });
+    }
+
+    addParamsToUrl();
+
     window.addEventListener('resize', () => {
         if(innerWidth < 768) {
             const width = parseInt(computedStyle.width) - (parseInt(computedStyle.paddingRight) * 2)
