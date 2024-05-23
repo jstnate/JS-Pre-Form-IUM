@@ -45,48 +45,48 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-    function addParamsToUrl() {
-        console.log("addParamsToUrl");
-        // Récupérer l'URL de la page en cours
-        var currentPageUrl = window.location.href;
-        // Récupérer les paramètres de l'URL
-        var urlParams = new URLSearchParams(currentPageUrl.split('?')[1]);
+  function addParamsToUrl() {
+    console.log("new");
 
-        // Récupérer tous les boutons avec la classe "candidature"
-        var buttons = document.querySelectorAll("#slide-eligible a, #slide-in-france a");
+    // Get the current page URL
+    var currentPageUrl = window.location.href;
+    // Get the URL parameters
+    var urlParams = new URLSearchParams(currentPageUrl.split('?')[1]);
 
-        // Pour chaque bouton
-        buttons.forEach(function(button) {
-            // Vérifier si l'attribut "href" existe
-            if (!button.hasAttribute("href")) {
-                console.error("Le bouton avec la classe 'candidature' doit avoir un attribut 'href'");
-                return; // Si l'attribut "href" est absent, sortir de la boucle
-            }
+    // Get all the buttons with the class "candidature"
+    var buttons = document.querySelectorAll("#slide-eligible a, #slide-in-france a");
 
-            // Récupérer l'URL présente sur le bouton
-            var buttonUrl = button.getAttribute("href");
-            // Vérifier si l'attribut "target" existe
-            var isBlank = button.hasAttribute("target") && button.getAttribute("target") === "_blank";
-            // Vérifier si l'URL contient déjà des paramètres
-            var hasParams = buttonUrl.includes("?");
-            // Ajouter le point d'interrogation s'il n'existe pas déjà
-            buttonUrl += hasParams ? "&" : "?";
-            // Créer une copie des paramètres pour chaque bouton
-            var buttonUrlParams = new URLSearchParams(urlParams);
-            // Ajouter les paramètres à l'URL présente sur le bouton
-            buttonUrlParams.forEach(function(value, key) {
-                buttonUrl += encodeURIComponent(key) + "=" + encodeURIComponent(value) + "&";
-            });
-            // Supprimer le dernier "&"
-            buttonUrl = buttonUrl.slice(0, -1);
-            // Définir l'attribut "href" du bouton avec la nouvelle URL
-            button.setAttribute("href", buttonUrl);
-            // Ajouter l'attribut target="_blank" pour ouvrir le lien dans un nouvel onglet
-            button.setAttribute("target", "_blank");
+    // For each button
+    buttons.forEach(function(button) {
+        // Check if the "href" attribute exists
+        if (!button.hasAttribute("href")) {
+            console.error("The button must have an 'href' attribute");
+            return; // If the "href" attribute is missing, exit the loop
+        }
+
+        // Get the URL present on the button
+        var buttonUrl = new URL(button.getAttribute("href"), window.location.origin);
+
+        // Append the current URL parameters to the button URL
+        urlParams.forEach((value, key) => {
+            buttonUrl.searchParams.set(key, value);
         });
-    }
+
+        console.log(buttonUrl.toString());
+
+        // Set the "href" attribute of the button with the new URL
+        button.setAttribute("href", buttonUrl.toString());
+
+        // Add the target="_blank" attribute to open the link in a new tab
+        button.setAttribute("target", "_blank");
+    });
+}
+
+addParamsToUrl();
+s
 
     addParamsToUrl();
+
 
   function displayFinalMessage(e) {
     e.preventDefault();
