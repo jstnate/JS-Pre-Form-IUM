@@ -46,12 +46,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function addParamsToUrl() {
-    console.log("new");
+    console.log("addParamsToUrl");
 
-    // Get the current page URL
-    var currentPageUrl = window.location.href;
-    // Get the URL parameters
-    var urlParams = new URLSearchParams(currentPageUrl.split('?')[1]);
+    // Get the URL of the parent page
+    var parentPageUrl = window.parent.location.href;
+    // Get the URL parameters from the parent page URL
+    var urlParams = new URLSearchParams(parentPageUrl.split('?')[1]);
 
     // Get all the buttons with the class "candidature"
     var buttons = document.querySelectorAll("#slide-eligible a, #slide-in-france a");
@@ -72,8 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
             buttonUrl.searchParams.set(key, value);
         });
 
-        console.log(buttonUrl.toString());
-
         // Set the "href" attribute of the button with the new URL
         button.setAttribute("href", buttonUrl.toString());
 
@@ -83,6 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
 }
 
 addParamsToUrl();
+
 
 
   function displayFinalMessage(e) {
