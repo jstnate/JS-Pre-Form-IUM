@@ -307,6 +307,10 @@ document.addEventListener('DOMContentLoaded', function() {
             button.setAttribute("href", buttonUrl);
             // Ajouter l'attribut target="_blank" pour ouvrir le lien dans un nouvel onglet
             button.setAttribute("target", "_blank");
+            // Ajouter l'attribut target="_blank" si nécessaire
+            var onclickValue = isBlank ? "window.click('" + buttonUrl + "', '_blank')" : "location.href='" + buttonUrl + "'";
+            // Définir l'attribut "onclick" du bouton avec la nouvelle URL et l'attribut target si nécessaire
+            button.setAttribute("onclick", onclickValue);
         });
     }
 
