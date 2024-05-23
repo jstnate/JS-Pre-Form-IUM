@@ -62,11 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 return; // Si l'attribut "href" est absent, sortir de la boucle
             }
 
-            // Bloquer le lien d'origine du bouton
-            button.addEventListener("click", function(event) {
-                event.preventDefault();
-            });
-
             // Récupérer l'URL présente sur le bouton
             var buttonUrl = button.getAttribute("href");
             // Vérifier si l'attribut "target" existe
