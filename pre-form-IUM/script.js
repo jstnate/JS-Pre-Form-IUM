@@ -266,7 +266,6 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     function addParamsToUrl() {
-        console.log('working');
         // Récupérer l'URL de la page en cours
         var currentPageUrl = window.location.href;
         // Récupérer les paramètres de l'URL
@@ -304,11 +303,10 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             // Supprimer le dernier "&"
             buttonUrl = buttonUrl.slice(0, -1);
-                console.log("button url="+buttonUrl);
-            // Ajouter l'attribut target="_blank" si nécessaire
-            var onclickValue = isBlank ? "window.open('" + buttonUrl + "', '_blank')" : "location.href='" + buttonUrl + "'";
-            // Définir l'attribut "onclick" du bouton avec la nouvelle URL et l'attribut target si nécessaire
-            button.setAttribute("onclick", onclickValue);
+                // Définir l'attribut "href" du bouton avec la nouvelle URL
+            button.setAttribute("href", buttonUrl);
+            // Ajouter l'attribut target="_blank" pour ouvrir le lien dans un nouvel onglet
+            button.setAttribute("target", "_blank");
         });
     }
 
