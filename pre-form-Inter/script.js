@@ -82,11 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
             button.setAttribute("href", buttonUrl);
             // Ajouter l'attribut target="_blank" pour ouvrir le lien dans un nouvel onglet
             button.setAttribute("target", "_blank");
-
-            // Ajouter l'attribut target="_blank" si nécessaire
-            var onclickValue = isBlank ? "window.click('" + buttonUrl + "', '_blank')" : "location.href='" + buttonUrl + "'";
-            // Définir l'attribut "onclick" du bouton avec la nouvelle URL et l'attribut target si nécessaire
-            button.setAttribute("onclick", onclickValue);
         });
     }
 
@@ -114,9 +109,10 @@ document.addEventListener("DOMContentLoaded", function () {
     ) {
       isEligibleMessage.classList.remove("hidden");
       isEligibleMessage.classList.add("flex");
-      setTimeout(() => {
-        document.querySelector("#slide-eligible a").click();
-      }, 1000);
+      const link = document.querySelector("#slide-eligible a");
+      if (link) {
+          window.open(link.href, '_blank');
+      }
     } else {
       isNotEligibleMessage.classList.remove("hidden");
       isNotEligibleMessage.classList.add("flex");
