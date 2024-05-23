@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
     function addParamsToUrl() {
-        console.log('working');
+        console.log("addParamsToUrl");
         // Récupérer l'URL de la page en cours
         var currentPageUrl = window.location.href;
         // Récupérer les paramètres de l'URL
@@ -61,6 +61,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.error("Le bouton avec la classe 'candidature' doit avoir un attribut 'href'");
                 return; // Si l'attribut "href" est absent, sortir de la boucle
             }
+
+            // preventDefault
+            button.addEventListener("click", function(e) {
+                e.preventDefault();
+            });
 
             // Récupérer l'URL présente sur le bouton
             var buttonUrl = button.getAttribute("href");
