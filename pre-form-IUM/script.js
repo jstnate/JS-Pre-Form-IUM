@@ -268,11 +268,9 @@ document.addEventListener('DOMContentLoaded', function() {
         preform.onsubmit = displayFinalMessage;
     };
 
-    function addParamsToUrl() {
-    
-        // Get the URL of the parent page
-        var parentPageUrl = window.parent.location.href;
-        // Get the URL parameters from the parent page URL
+    window.addEventListener('message', function(event) {
+        // You can add additional checks here to ensure the message is coming from a trusted source
+        var parentPageUrl = event.data;
         var urlParams = new URLSearchParams(parentPageUrl.split('?')[1]);
     
         // Get all the buttons with the class "candidature"
@@ -300,9 +298,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Add the target="_blank" attribute to open the link in a new tab
             button.setAttribute("target", "_blank");
         });
-    }
-    
-    addParamsToUrl();
+    });
     
     
     window.addEventListener('resize', () => {
