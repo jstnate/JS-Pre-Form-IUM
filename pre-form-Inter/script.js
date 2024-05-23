@@ -83,9 +83,6 @@ document.addEventListener("DOMContentLoaded", function () {
 }
 
 addParamsToUrl();
-s
-
-    addParamsToUrl();
 
 
   function displayFinalMessage(e) {

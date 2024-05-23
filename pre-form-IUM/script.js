@@ -306,9 +306,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     addParamsToUrl();
     
-
-    addParamsToUrl();
-
     window.addEventListener('resize', () => {
         if(innerWidth < 768) {
             const width = parseInt(computedStyle.width) - (parseInt(computedStyle.paddingRight) * 2)
