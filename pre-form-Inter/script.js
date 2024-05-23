@@ -12,8 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
   function slideAction(id) {
     const buttonSlide = document.getElementById(`next-slide-${id}`);
     const slideElement = document.getElementById(`slide-${id}`);
-
-    slideElement.style.transition = "transform 0.4s ease-in-out";
+    if(slideElement){
+        slideElement.style.transition = "transform 0.4s ease-in-out";
+    }
 
     if (buttonSlide) {
       buttonSlide.onclick = function () {
@@ -61,11 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.error("Le bouton avec la classe 'candidature' doit avoir un attribut 'href'");
                 return; // Si l'attribut "href" est absent, sortir de la boucle
             }
-
-            // preventDefault
-            button.addEventListener("click", function(e) {
-                e.preventDefault();
-            });
 
             // Récupérer l'URL présente sur le bouton
             var buttonUrl = button.getAttribute("href");
@@ -116,7 +112,9 @@ document.addEventListener("DOMContentLoaded", function () {
       isEligibleMessage.classList.add("flex");
       const link = document.querySelector("#slide-eligible a");
       if (link) {
-          window.open(link.href, '_blank');
+        setTimeout(() => {
+            window.open(link.href, '_blank');
+        }, 1000);
       }
     } else {
       isNotEligibleMessage.classList.remove("hidden");
